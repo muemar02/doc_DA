@@ -1604,23 +1604,23 @@ isbn=false, url=false, doi=false, eprint=false%
 %   citecolor=pdfcitecolor,  %
 %   % Links
 %   raiselinks=true,			 % calculate real height of the link
-	breaklinks,              % Links berstehen Zeilenumbruch
+%	breaklinks = false,              % Links berstehen Zeilenumbruch
 	hidelinks,
 %   backref=page,            % Backlinks im Literaturverzeichnis (section, slide, page, none)
 %   pagebackref=true,        % Backlinks im Literaturverzeichnis mit Seitenangabe
 %   verbose,
 %   hyperindex=true,         % backlinkex index
-	linktocpage=true,        % Inhaltsverzeichnis verlinkt Seiten
+	linktocpage=false,        % make page number, not text, be link on TOC, LOF and LOT
 %   hyperfootnotes=false,     % Keine Links auf Fussnoten
 %   % Bookmarks
-%   bookmarks=true,          % Erzeugung von Bookmarks fuer PDF-Viewer
+   bookmarks=true,          % Erzeugung von Bookmarks fuer PDF-Viewer
 %   bookmarksopenlevel=1,    % Gliederungstiefe der Bookmarks
 %   bookmarksopen=true,      % Expandierte Untermenues in Bookmarks
-%   bookmarksnumbered=true,  % Nummerierung der Bookmarks
-%   bookmarkstype=toc,       % Art der Verzeichnisses
+   bookmarksnumbered=true,  % Nummerierung der Bookmarks
+   bookmarkstype=toc,       % Art der Verzeichnisses
 %   % Anchors
 %   plainpages=false,        % Anchors even on plain pages ?
-%   pageanchor=true,         % Pages are linkable
+   pageanchor=true,         % Pages are linkable
 %   % PDF Informationen
 %   pdftitle={},             % Titel
 %   pdfauthor={},            % Autor
@@ -1632,7 +1632,7 @@ isbn=false, url=false, doi=false, eprint=false%
    pdfpagelabels=true,           % set PDF page labels
 %   pdfpagelayout=TwoPageRight, % zweiseitige Darstellung: ungerade Seiten
 %   									 % rechts im PDF-Viewer
-%   %pdfpagelayout=SinglePage, % einseitige Darstellung
+   pdfpagelayout=SinglePage, % einseitige Darstellung
 ]{hyperref}
 
 \usepackage{fontawesome}
@@ -1856,13 +1856,11 @@ isbn=false, url=false, doi=false, eprint=false%
 \thispagestyle{empty}
 \vspace*{4cm}
 \noindent\textbf{\Large Selbstständigkeitserklärung}\\[4ex]
-Hiermit erkläre ich, dass ich \arbeitartikel{} von mir am heutigen Tage \arbeitwoeingereicht{} der Fakultät Verkehrswissenschaften \glqq Friedrich List\grqq { } \arbeiteingereicht{} \@subject{} zum Thema
-\begin{center}
-	{\usekomafont{subtitle}\normalsize\@title}
-\end{center}
-selbstständig und ohne Benutzung anderer als der angegebenen Hilfsmittel angefertigt
-habe. Alle Stellen, die wörtlich oder sinngemäß aus veröffentlichten oder nicht
-veröffentlichten Schriften entnommen sind, wurden als solche kenntlich gemacht.
+Hiermit  versichere  ich,  dass  ich  die  vorliegende  Arbeit  ohne  unzul\"assige  Hilfe  Dritter  und ohne  Benutzung  anderer  als  der  angegebenen  Hilfsmittel  angefertigt  habe;  die  aus  fremden  Quellen direkt oder indirekt \"ubernommenen Gedanken sind als solche kenntlich gemacht. Bei der Auswahl und Auswertung des Materials sowie bei der Herstellung des Manuskripts habe ich Unterst\"utzungsleistungen von folgenden Personen erhalten: \begin{itemize}
+\item Person 1
+\item Person 2
+\end{itemize} 
+Weitere Personen waren an der geistigen Herstellung der vorliegenden Arbeit nicht beteiligt. Mir  ist  bekannt,  dass  die  Nichteinhaltung  dieser  Erkl\"arung  zum  nachtr\"aglichen  Entzug  des  Diplomabschlusses f\"uhren kann. 
 
 \vspace*{2cm}
 
