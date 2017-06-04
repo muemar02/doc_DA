@@ -649,8 +649,10 @@
 % other BibTeX styles: http://www.cs.stir.ac.uk/~kjt/software/latex/showbst.html
 
 \usepackage[backend=biber,
-style=alphabetic,
-citestyle=alphabetic,
+%style=alphabetic,
+style = authoryear,
+%citestyle=alphabetic,
+citestyle=authoryear ,
 maxalphanames=4,minalphanames=4]{biblatex}
 %gesonderte Einstellungen, ob Felder gezielt ausgelassen werden sollen
 \ExecuteBibliographyOptions{%
@@ -790,6 +792,40 @@ isbn=false, url=false, doi=false, eprint=false%
 	%smaller,		% Print acronym in smaller fontsize
 	%printonlyused %
 ]{acronym}
+
+%Fix acronym Package to be able to use translations;
+% See https://tex.stackexchange.com/questions/112222/how-to-add-translation-to-long-form-of-acronym for source
+\makeatletter
+\newcommand{\acroforeign}[1]{}
+
+% patch the environment to print the foreign definition:
+\AtBeginEnvironment{acronym}{%
+  \def\acroforeign#1{ (#1)}%
+}
+
+% patch the acronym definition to safe the foreign definition:
+\patchcmd\AC@@acro
+  {\begingroup}
+  {\begingroup\def\acroforeign##1{\csdef{ac@#1@foreign}{##1, }}}
+  {}
+  {}
+
+% renew the first output to include the foreign definition if given:
+\renewcommand*{\@acf}[1]{%
+  \ifAC@footnote
+    \acsfont{\csname ac@#1@foreign\endcsname\AC@acs{#1}}%
+    \footnote{\AC@placelabel{#1}\hskip\z@\AC@acl{#1}{}}%
+  \else
+    \acffont{%
+      \AC@placelabel{#1}\hskip\z@\AC@acl{#1}%
+      \nolinebreak[3] %
+      \acfsfont{(\acsfont{\csname ac@#1@foreign\endcsname\AC@acs{#1}})}%
+    }%
+ \fi
+ \ifAC@starred\else\AC@logged{#1}\fi
+}
+\makeatother
+
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % verbatim packages
