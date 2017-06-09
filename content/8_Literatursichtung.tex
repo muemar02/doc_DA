@@ -203,60 +203,22 @@ Siehe f\"ur noch aktuellere Entwicklungen \cite{Pasman_2016}.
 \paragraph*{\cite{Batres_2004}} An ontology approach to support HAZOP studies
 
 \section{Fehlerfortpflanzung}
-\paragraph*{\cite{Parmar_1987}} \textcolor{red}{wichtig!}
+\subsection{modellbasiert, quantitativ}
+\subsection{modellbasiert, qualitativ}
+\subsubsection{\cite{Parmar_1987}} Eine Computer basierte Methode zur Identifizierung von Gefahren in kontinuierlich betriebenen Anlagen wird vorgestellt. Das Vorgehen der Gefahridentifizierung orientiert sich dabei stark am Vorgehen in einer \ac{hazop}. Die Methode soll bei einer \ac{hazop} als Erg\"anzung einsetzbar sein. 
 
-\paragraph*{\cite{Parmar_1987a}} \textcolor{red}{wichtig!}
+Als Basis der Gefahridentifikation dient die Menge alle Prozessvariablen -- erg\"anzt um die Menge aller Guide-W\"orter (mehr, weniger, zu viel, zu wenig...), die im Rahmen einer \ac{hazop} angewandt werden. Die Gesamtanlage wird in Basis Einheiten zerlegt. Eine Basiseinheiten ist durch ihr Verhalten bez\"uglich der Weiterleitung von Gefahren beschrieben. Gefahren k\"onnen entstehen, verst\"arkt, ged\"ampft, weitergeleitet oder aufgehoben werden. Physisch werden Basis Einheiten in Leitungselemente (\glqq lines\grqq { }) (Pumpen, Rohre Ventile...) und Gef\"a\ss{}e (\glqq vessels\grqq { }) (Tanks, Reaktoren, Kolonnen...) unterschieden. Ob ein Fehler durch eine Einheit weitergereicht wird, oder nicht, wird durch definierte Regeln beschrieben. Die Aufstellung dieser Regeln wird im Detail genannt. Au\ss{}erdem wird auf die Funktion des erstellten Computer Programms eingegangen. 
 
-\paragraph*{\cite{Bartolozzi_2000}} Qualitative models of equipment units and their use in automatic {HAZOP} analysis
+Die Anwendbarkeit der Methode wird an einem konkreten Beispiel gezeigt: \cite{Parmar_1987a}
 
-\paragraph*{\cite{Hu_2015}} Fehlerfortpflanzung mit Hilfe von Dynamischen Bayesschen Netzen. Grundlage bietet die \ac{hazop} der Gesamtanlage. Ziel ist es w\"ahrend dem Betrieb einer Anlage bei Auftreten eines Fehlers (eines Alarms) dessen wahrscheinlichste Ursache oder Ursachen schnell zu ermitteln und den Pfad von der Ursache oder den Ursachen zum Fehler/Alarm einfach lesbar (grafisch) darstellbar zu machen. Dem Operator wird so die Wahl, welche Aktion zum Beheben des Fehlers notwendig ist, ma\ss{}beglich vereinfacht. \hfill \newline
+\textcolor{red}{Methode ist als Grundlage sinnvoll. Weiterentwicklung der Methode suchen!}
 
-Grundlage des Netzes sind eine Struktur, welche die Entwicklung von Fehlern abbildet und eine Menge von Messdaten, welche das Netz verfeinert. \hfill \newline
- Die statischen Knoten des Netzes werden aus einer voran gegangen \ac{hazop} ermittelt. Jeder Knoten entspricht dabei einer in der \ac{hazop} untersuchten Prozessvariable. Alternative Verfahren dazu sind die Durchf\"uhrung einer \ac{fta} oder die Anwendung der \textbf{Bow Tie Methode}. Insbesondere eine \ac{fta} w\"urde die Fortpflanzung von Fehlern genauer beschreiben und w\"are daher zu bevorzugen. Die Informationen, welche aus einer \ac{hazop} entstehen, werden aber als ausreichend betrachtet. Die statischen Knoten werden um dynamische Knoten erg\"anzt. Sie repr\"asentieren (versteckte) Fehler-Modi des Systems. Ihre genauen Werte werden aus Messdaten aus dem Live-Betrieb ermittelt.  \hfill \newline
-Neben der Festlegung der Knoten muss die Struktur bestimmt werden. Der L\"osungsaufwand dieses Problems w\"achst exponentiell mit der Anzahl an Knoten. Mit dem Wissen aus der \ac{hazop} (dem Wissen, wie sich ein Fehler fortpflanzt) kann der L\"osungsraum bei der Strukturberechnung des Netzes aber stark eingeschr\"ankt werden. Zu beachten ist dabei, dass im Rahmen der \ac{hazop} in der Regel nur direkt benachbarte Bauteile (Knoten, definierte Untersuchungseinheiten) auf Wechselwirkung hin untersucht werden. Weiterf\"uhrende Fortpflanzungen werden nicht betrachtet.  Die Berechnung der optimalen Struktur eines Dynamischen Bayesschen Netzes kann durch verschiedene Algorithmen erfolgen. Eine Variante ist der \textbf{K2 Algorithmus} von Cooper und Hersovits, 1992. Dazu werden jedoch Messdaten ben\"otigt, welche die zeitliche Entwicklung eines Fehlers abbilden (aus Simulation gewinnbar?). Die Aufstellung der Conditional probability tables (CPT) erfordert weiterhin gro\ss{}e Mengen an Messdaten. Das erhaltene Netz kann dann aber die Entwicklung von Fehlern \"uber mehrerer Ebenen hinweg ermitteln / untersuchen. Eine Darstellung der Netzentstehung findet sich in \figureref{fig:Hu_2015_netzentstehung}. \hfill \newline
-
-\textcolor{green}{Fazit: Methode sieht schick aus, Datenbasis ist bei neuer Anlage aber nicht gegeben. Nur eine bestehende (Komplett-!) Anlage mit historischen Messdaten kann mit dieser Methode tiefgreifend analysiert werden. Eine Sicherheitsanalyse kann dann damit verbessert werden.} 
-
-\begin{figure}[h!tb]
-\begin{center}
-\includegraphics[width=0.5\textwidth]{bilder/Hu_2015_Netzentstehung.png}
-\caption{Erstellung eines Dynamischen Bayesschen Netzes}
-\label{fig:Hu_2015_netzentstehung}
-\end{center}
-\end{figure}
-
-\paragraph*{\cite{Zhang_2017}} Als datenbasierte Risikoanalyse wird Deep Learning vorgeschlagen. Genau genommen wird die Verwendung eines \ac{dbn} vorgeschlagen. Dessen Schichten bestehen aus \ac{rbn}. Ziel ist eine verbesserte Erkennung von Fehlern.  \hfill \newline
-
-\"Ubersicht \"uber aktuelle Methoden der datenbasierten Risikoanalyse (als Alternative zu quantitativen oder qualitativen modellbasierten Methoden): \begin{enumerate}
-\item statistische Methoden
-  \begin{itemize}
-  \item principal component analysis (PCA)
-  \item partial least squares (PLS)
-  \item independent component analysis (ICA)
-  \item fisher discriminant analysis (FDA)
-  \item subspace aided approach (SAP)
-  \item correspondence analysis (CA)
-  \item $\rightarrow$ Vergleich der Methoden anhand des \ac{teb} durch  (Yin, et al., 2012)
-  \item Bayesian diagnosis 
-  \end{itemize}
-\item Methods based  on pattern classification
-  \begin{itemize}
-  \item artificial neural network (ANN)
-  \item k-nearest neighbor (KNN) 
-  \item self-organizing map (SOM)
-  \item support vector machine (SVM) 
-  \item artificial immune system (AIS)
-  \end{itemize}
-\end{enumerate}
-Die vorgestellte Methode erweist sich bei Anwendung auf den \ac{teb} als sehr erfolgreich. Jedoch wird zum Training der Struktur (wie auch bei allen anderen Risikoanalysemethoden, welche auf Daten basieren) eine gro\ss{}e Mengen an Messdaten erfordert. Insbesondere eine gro\ss{}e Anzahl an Daten zu Fehlfunktionen in der Anlage ist erforderlich um die Fortpflanzung von Fehlern im Netz beschreiben zu k\"onnen. \hfill \newline
-
-\textcolor{green}{Fazit: Methode ist wenig Erfolg versprechend f\"ur den Einsatz in modularen Anlagen, bevor die Gesamtanlage bestehen aus Modulen in Betrieb genommen wurde.}
-
-\paragraph*{\cite{Yang_2010}} Ziel ist die Fortpflanzung von Fehler zu ermitteln. Einerseits um w\"ahrend der Entwurfsphase die Auswirkungen eines Fehlers besser absch\"atzen und in Folge dessen Gegenma\ss{}nahmen in geeignetem Umfang entwerfen zu k\"onnen und andererseits um im Betrieb die genau Ursache bzw. die Verkettung von Ursachen ermitteln zu k\"onnen, welche zu einem Alarm gef\"uhrt haben. Dazu werden gerichtete Graphen (\ac{sdg}) verwendet. \hfill \newline
+\subsubsection{\cite{Yang_2010}} Ziel ist die Fortpflanzung von Fehler zu ermitteln. Einerseits um w\"ahrend der Entwurfsphase die Auswirkungen eines Fehlers besser absch\"atzen und in Folge dessen Gegenma\ss{}nahmen in geeignetem Umfang entwerfen zu k\"onnen und andererseits um im Betrieb die genau Ursache bzw. die Verkettung von Ursachen ermitteln zu k\"onnen, welche zu einem Alarm gef\"uhrt haben. Dazu werden gerichtete Graphen (\ac{sdg}) verwendet.
 
 Gerichtete Graphen bestehen aus Knoten und gerichteten Kanten, welche die Beziehung zwischen den Knoten darstellen. Die Knoten umfassen bspw. Prozessgr\"o\ss{}en, Arbeitspunkte, Stellgr\"o\ss{}en und bekannte St\"orungen.  
-Die Erstellung eines solchen Graphen ist auf Textbasis mit Hilfe von Grapheditoren/ Werkzeugen wie Graphviz (http://www.graphviz.org/) m\"oglich. Dies erm\"oglicht eine Automatisierung. \hfill \newline
-Die historische Entwicklung von \ac{sdg} wird kurz benannt. Der Aufbau von \ac{sdg} kann auf Basis von \acp{dae} oder auf Grundlage von Wissen \"uber den Prozess geschehen. F\"ur Standardkomponenten oder Module kann bereits vorab ein \ac{sdg} erstellt werden. Die Informatio n der Kopplung kann aus dem \ac{pid} gewonnen werden. Wird die Struktur des \ac{pid} z. B. als XML oder als Verbindungs- und Adjazenzmatrix abgebildet, so k\"onnen Modul-\acp{sdg} korrekt gekoppelt werden. \hfill \newline
+Die Erstellung eines solchen Graphen ist auf Textbasis mit Hilfe von Grapheditoren/ Werkzeugen wie Graphviz (http://www.graphviz.org/) m\"oglich. Dies erm\"oglicht eine Automatisierung.
+
+Die historische Entwicklung von \ac{sdg} wird kurz benannt. Der Aufbau von \ac{sdg} kann auf Basis von \acp{dae} oder auf Grundlage von Wissen \"uber den Prozess geschehen. F\"ur Standardkomponenten oder Module kann bereits vorab ein \ac{sdg} erstellt werden. Die Informatio n der Kopplung kann aus dem \ac{pid} gewonnen werden. Wird die Struktur des \ac{pid} z. B. als XML oder als Verbindungs- und Adjazenzmatrix abgebildet, so k\"onnen Modul-\acp{sdg} korrekt gekoppelt werden.
 \begin{itemize}
 \item Vorteile einer wissensbasierten Erstellung von \acp{sdg}: 
   \begin{itemize}
@@ -286,11 +248,82 @@ Fazit: Kombination der beiden Methoden. Wissensbasierter Ansatz schafft komplett
 
 \textcolor{green}{Fazit: Ansatz der Graphen sieht vielversprechend aus, die Verfeinerung und Verifizierung des \ac{sdg} mit Messdaten wird aber nicht m\"oglich sein. \textbf{Weitere Suche in die Richtung lohnt sich.}}
 
-\paragraph*{\cite{Liang_2017}}Der Einfluss von Alterungserscheinungen in Mehrkomponentensystemen wird untersucht. Besteht ein Systemen aus sicherheitsrelevanten und nicht sicherheitsrelevanten Systemen, so kann die Alterung/ der Verschlei\ss{} der nicht sicherheitsrelevanten Systemen die Alterung der sicherheitsrelevanten Systeme durch Fortpflanzung der Alterungserscheinung beschleunigen/ beeinflussen. Setzt sich durch Alterung beispielsweise ein Filter langsam zu, so muss eine Pumpe immer mehr Druck auf eine Fl\"ussigkeiten aufbauen, um einen konstanten Volumenstrom hinter dem Filter zu gew\"ahrleisten. Die Pumpe verschlei\ss{}t dadurch schneller. Eine solche Wechselwirkung kann geeignet durch Verwendung einer multi-layered vector-valued continuous-time Markov chain abgebildet werden. Dazu werden statistische Daten ben\"otigt. \hfill \newline 
+\subsection{datenbasiert}
+\subsubsection{\cite{Zhang_2017}} 
+Als datenbasierte Risikoanalyse wird Deep Learning vorgeschlagen. Genau genommen wird die Verwendung eines \ac{dbn} vorgeschlagen. Dessen Schichten bestehen aus \ac{rbn}. Ziel ist eine verbesserte Erkennung von Fehlern.
+
+\"Ubersicht \"uber aktuelle Methoden der datenbasierten Risikoanalyse (als Alternative zu quantitativen oder qualitativen modellbasierten Methoden): \begin{enumerate}
+\item statistische Methoden
+  \begin{itemize}
+  \item principal component analysis (PCA)
+  \item partial least squares (PLS)
+  \item independent component analysis (ICA)
+  \item fisher discriminant analysis (FDA)
+  \item subspace aided approach (SAP)
+  \item correspondence analysis (CA)
+  \item $\rightarrow$ Vergleich der Methoden anhand des \ac{teb} durch  (Yin, et al., 2012)
+  \item Bayesian diagnosis 
+  \end{itemize}
+\item Methods based  on pattern classification
+  \begin{itemize}
+  \item artificial neural network (ANN)
+  \item k-nearest neighbor (KNN) 
+  \item self-organizing map (SOM)
+  \item support vector machine (SVM) 
+  \item artificial immune system (AIS)
+  \end{itemize}
+\end{enumerate}
+Weitere \"Ubersichtsarbeit zum Thema Datenbasierte Fehlerfortpflanzung findet sich in \cite{Thornhill_2006}. 
+
+Die vorgestellte Methode erweist sich bei Anwendung auf den \ac{teb} als sehr erfolgreich. Jedoch wird zum Training der Struktur (wie auch bei allen anderen Risikoanalysemethoden, welche auf Daten basieren) eine gro\ss{}e Mengen an Messdaten erfordert. Insbesondere eine gro\ss{}e Anzahl an Daten zu Fehlfunktionen in der Anlage ist erforderlich um die Fortpflanzung von Fehlern im Netz beschreiben zu k\"onnen.
+
+\textcolor{green}{Fazit: Methode ist wenig Erfolg versprechend f\"ur den Einsatz in modularen Anlagen, bevor die Gesamtanlage bestehen aus Modulen in Betrieb genommen wurde.}
+
+\subsubsection{\cite{Liang_2017}}Der Einfluss von Alterungserscheinungen in Mehrkomponentensystemen wird untersucht. Besteht ein Systemen aus sicherheitsrelevanten und nicht sicherheitsrelevanten Systemen, so kann die Alterung/ der Verschlei\ss{} der nicht sicherheitsrelevanten Systemen die Alterung der sicherheitsrelevanten Systeme durch Fortpflanzung der Alterungserscheinung beschleunigen/ beeinflussen. Setzt sich durch Alterung beispielsweise ein Filter langsam zu, so muss eine Pumpe immer mehr Druck auf eine Fl\"ussigkeiten aufbauen, um einen konstanten Volumenstrom hinter dem Filter zu gew\"ahrleisten. Die Pumpe verschlei\ss{}t dadurch schneller. Eine solche Wechselwirkung kann geeignet durch Verwendung einer multi-layered vector-valued continuous-time Markov chain abgebildet werden. Dazu werden statistische Daten ben\"otigt.
 
 \textcolor{green}{Fazit: Die Fortpflanzung \glqq normaler\grqq { }Fehler in Sinne der \ac{hazop} kann dadurch nicht ohne aufwendige Umformungen/ Adaptionen abgebildet werden.} 
 
-\paragraph*{\cite{Cai_2015}} Resiliente Systeme, Verwendung eines \ac{hfpm} als Erweiterung der \ac{irml}. Ziel des Modells ist die Beschreibung des dynamischen Verhaltens und die dynamische Fortpflanzung von Fehlern. Des neue Modell hat zwei Teile: statische Analyse der Struktur und dynamische Analyse f\"ur Fehlerfortpflanzung. \linebreak
+\subsubsection{\cite{Bauer_2008}}
+Die vorgestellte Methode verwendet historische Daten um die Fehlerfortpflanzung zu untersuchen.  Mit Hilfe von Kreuzkorrelation wird die Zeitverz\"ogerung zwischen Prozessgr\"o\ss{}en berechnet und daraus eine Struktur der Abh\"angigkeiten abgeleitet. Aus der Kreuzkorrelation wird eine kausale Abfolge von Ereignissen konstruiert, dass die Fortpflanzung eines Fehlers in einem Graphen dargestellt werden kann. 
+
+\textcolor{green}{Die Methode ben\"otigt Messdaten der Gesamtanlage und kann daher nicht verwendet werden.}
+
+\subsubsection{\cite{Wang_2016}} Die Methode basiert auf der Auswertung von Residuen und einer \glqq contribution plot analysis\grqq { }. Die Residuen werden durch Identifikation von Parit\"ats- und Unterr\"aume berechnet. Die optimalen Residuen werden dann genutzt, um ein Fehleridentifikationsschema zu erstellen. Auf Basis des Durchschnitts aktueller und historischer Residuen wird ein Index definiert. Die Fehlerfortpflanzung kann dann anhand dieses Index ermittelt werden. Anhand eines \ac{teb} wird die Wirksamkeit des Verfahrens demonstriert.
+
+Die Einleitung gibt einen umfassenden \"Uberblick \"uber datenbasierte Methoden und referenziert zahlreiche Quellen.  
+
+\textcolor{green}{Die Methode ist f\"ur meine Zwecke nicht geeignet, das Einleitungskapitel lohnt sich aber wegen der vielen datenbasierten Verfahren noch mal anzusehen.}
+
+\subsubsection{\cite{Hajihosseini2014}} Datenbasierter Ansatz welcher ein qualitatives Modell mit Hilfe statistischer Entropien liefert.  Das Verfahren wurde erfolgreich eingesetzt, um einen gerichteten Ursache-Wirkungsgraphen zu erstellen (Quellen werden genannt). Das Verfahren wird derart erweitert, dass einzeln auftretende Fehler, welche eine erkannte St\"orung verursacht haben, identifiziert werden k\"onnen.
+
+\subsubsection{\cite{Wang2012}} Verwendung von \ac{pca} in Verbindung mit einer angepassten Variante von \ac{dtw} um insbesondere in der schwierigen Phase des Starts einer verfahrenstechnischen Anlage Fehler erkennen zu k\"onnen. Die Einleitung liefert zahlreiche Verweise zur Verwendung von \ac{pca}. Es kommt die Software \glqq SymCure\grqq { } der Firma \glqq GenSym\grqq { }zum Einsatz, mit Hilfe derer umfangreiche Entwicklungen zum Thema Fehlererkennung und -behebung m\"oglich sind. Die vorgestellte Methode vergleicht online den aktuellen Signalverlauf mit bekannten Verl\"aufen von Fehlerzust\"anden und Normverl\"aufen. Auf diese Weise wird das Auftreten bekannter Fehler diagnostiziert. Neue Fehler werden durch die eingesetzte Software \glqq SymCure\grqq { }erkannt, deren Ursache bestimmt und der Verlauf anschlie\ss{}end der Signaldatenbank hinzugef\"ugt. Die Methode zeichnet sich vor allem durch hohen Recheneffizienz aus.
+
+\textcolor{green}{Der Verweis auf viele Arbeiten zu \ac{pca} und auf die verwendete Software ist hilfreich. Au\ss{}erdem kann die Arbeit als Beispiel verwendet werden.}
+
+\subsubsection{\cite{Li_2016}} Komplettes Framework zum Erkennen von Fehlern und Identifikation der zugrunde liegenden Ursachen. 
+
+\textcolor{green}{Das erste Kapitel verweist auf viele Arbeiten zum Thema datenbasierte Analyse und benennt bekannte Probleme.}
+
+\subsection{hybride Methoden}
+\subsubsection{\cite{Hu_2015}} 
+\textcolor{green}{modellbasiert qualitativ und datenbasiert} \linebreak
+Fehlerfortpflanzung mit Hilfe von Dynamischen Bayesschen Netzen. Grundlage bietet die \ac{hazop} der Gesamtanlage. Ziel ist es w\"ahrend dem Betrieb einer Anlage bei Auftreten eines Fehlers (eines Alarms) dessen wahrscheinlichste Ursache oder Ursachen schnell zu ermitteln und den Pfad von der Ursache oder den Ursachen zum Fehler/Alarm einfach lesbar (grafisch) darstellbar zu machen. Dem Operator wird so die Wahl, welche Aktion zum Beheben des Fehlers notwendig ist, ma\ss{}beglich vereinfacht.
+
+Grundlage des Netzes sind eine Struktur, welche die Entwicklung von Fehlern abbildet und eine Menge von Messdaten, welche das Netz verfeinert. \linebreak
+ Die statischen Knoten des Netzes werden aus einer voran gegangen \ac{hazop} ermittelt. Jeder Knoten entspricht dabei einer in der \ac{hazop} untersuchten Prozessvariable. Alternative Verfahren dazu sind die Durchf\"uhrung einer \ac{fta} oder die Anwendung der \textbf{Bow Tie Methode}. Insbesondere eine \ac{fta} w\"urde die Fortpflanzung von Fehlern genauer beschreiben und w\"are daher zu bevorzugen. Die Informationen, welche aus einer \ac{hazop} entstehen, werden aber als ausreichend betrachtet. Die statischen Knoten werden um dynamische Knoten erg\"anzt. Sie repr\"asentieren (versteckte) Fehler-Modi des Systems. Ihre genauen Werte werden aus Messdaten aus dem Live-Betrieb ermittelt.  \linebreak
+Neben der Festlegung der Knoten muss die Struktur bestimmt werden. Der L\"osungsaufwand dieses Problems w\"achst exponentiell mit der Anzahl an Knoten. Mit dem Wissen aus der \ac{hazop} (dem Wissen, wie sich ein Fehler fortpflanzt) kann der L\"osungsraum bei der Strukturberechnung des Netzes aber stark eingeschr\"ankt werden. Zu beachten ist dabei, dass im Rahmen der \ac{hazop} in der Regel nur direkt benachbarte Bauteile (Knoten, definierte Untersuchungseinheiten) auf Wechselwirkung hin untersucht werden. Weiterf\"uhrende Fortpflanzungen werden nicht betrachtet.  Die Berechnung der optimalen Struktur eines Dynamischen Bayesschen Netzes kann durch verschiedene Algorithmen erfolgen. Eine Variante ist der \textbf{K2 Algorithmus} von Cooper und Hersovits, 1992. Dazu werden jedoch Messdaten ben\"otigt, welche die zeitliche Entwicklung eines Fehlers abbilden (aus Simulation gewinnbar?). Die Aufstellung der Conditional probability tables (CPT) erfordert weiterhin gro\ss{}e Mengen an Messdaten. Das erhaltene Netz kann dann aber die Entwicklung von Fehlern \"uber mehrerer Ebenen hinweg ermitteln / untersuchen. Eine Darstellung der Netzentstehung findet sich in \figureref{fig:Hu_2015_netzentstehung}. 
+
+\textcolor{green}{Fazit: Methode sieht schick aus, Datenbasis ist bei neuer Anlage aber nicht gegeben. Nur eine bestehende (Komplett-!) Anlage mit historischen Messdaten kann mit dieser Methode tiefgreifend analysiert werden. Eine Sicherheitsanalyse kann dann damit verbessert werden.} 
+
+\begin{figure}[h!tb]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{bilder/Hu_2015_Netzentstehung.png}
+\caption{Erstellung eines Dynamischen Bayesschen Netzes}
+\label{fig:Hu_2015_netzentstehung}
+\end{center}
+\end{figure}
+
+\subsubsection{\cite{Cai_2015}} Resiliente Systeme, Verwendung eines \ac{hfpm} als Erweiterung der \ac{irml}. Ziel des Modells ist die Beschreibung des dynamischen Verhaltens und die dynamische Fortpflanzung von Fehlern. Des neue Modell hat zwei Teile: statische Analyse der Struktur und dynamische Analyse f\"ur Fehlerfortpflanzung. Untersucht werden Fehler durch Abweichungen von Stoffparametern und Ger\"ateausf\"alle. Der Fokus liegt auf der Analyse der Resilienz (F\"ahigkeit des Systems trotz Fehler in definierten Zustand zu gelangen). \linebreak
 
 Wird eine \ac{hazop} um ein Strukturmodell erg\"anzt, so kann eine Fehleranalyse systematisch durchgef\"uhrt werden ( Boonthum et al., 2014 ). Eine \ac{hazop} erfasst aber nur die Abh\"angigkeit von Prozessgr\"o\ss{}en und nicht die der Komponenten eines Systems, eine makroskopische Betrachtung von Fehlerfortpflanzungen ist daher nicht m\"oglich. Die folgenden Methoden zur makroskopischen Betrachtung werden genannt: 
 \begin{itemize}
@@ -311,8 +344,53 @@ Vorteile \ac{hfpm}: \begin{enumerate}
 \end{enumerate}
 Systemaufbau: \begin{itemize}
 \item basierend auf \ac{irml}
-\item ein System wird in Subsysteme gegliedert, die Struktur durch ein hierarchisches Framework dargestellt
+\item ein System wird in Subsysteme gegliedert, die Struktur durch ein hierarchisches Framework dargestellt, die Gliederung in mehrere Ebenen von Subsystemen stellt die Prozessstruktur und Fehlerszenarien dar
+\item statische Analyse: zeigt den Grad der Abh\"angigkeit von Subsystemen auf, das System wird auf die Teile mit den st\"arksten Wechselwirkungen reduziert und diese Teilsysteme werden im Detail weiter untersucht
+\item dynamische Analyse: Anwendung von Testf\"allen; durch Wenn--dann Analyse werden die Fortpflanzung eines bekannten Fehlers und die Operationen des Systems, welche notwendig sind, um in einen stabilen Zustand zur\"uck zu kehren, im Modell so eingestellt, dass das Verhalten dem Testfall entspricht, mit Hilfe geeigneter Parameter, welche vor allem das zeitliche Verhalten widerspiegeln, wird das Verhalten gekennzeichnet und darauf aufbauen ein Zustandsgraph ermittelt
 \end{itemize}
+
+\textcolor{green}{Fazit: statische Analyse ist hilfreich, bietet aber keinen besonderen Mehrwert, dynamische Analyse erforderte historische Messdaten, Aufteilung auf Module ist fragw\"urdig, Analyse der anf\"alligsten Subsysteme ist hilfreich, Fokus liegt auf Resilienz und Berechnungen zum Sicherheitslevel insbesondere w\"ahrend ein Fehler sich im System verbreitet und das System darauf reagiert, f\"ur meine Arbeit eher nicht zu gebrauchen}
+\textcolor{red}{die verwiesenen Methoden zur makroskopischen Betrachtung k\"onnten hilfreich sein.}
+
+\subsubsection{\cite{Mallick_2013}} Entwicklung einer echtzeitf\"ahigen Methode zum Erkennen des Vorliegen eines Fehlers und Identifikation der Grundursache. Verwendung von \ac{pca} in Kombination mit \ac{bbn}. Aus Daten zum Normalbetrieb wird das \ac{pac} aufgebaut. Im laufenden Betrieb kann dann damit das Vorliegen eines Fehlers erkannt werden. Mit Hilfe historischer Daten zur Prozessdynamik oder durch Formulierung von Differentialgleichungen oder durch Expertenwissen wird das \ac{bbn} aufgestellt. Auf Basis des \ac{bbn} kann bei vorliegen eines Fehlers dessen Ursache ermittelt werden. Das initiale \ac{bbn} wird mit fortschreitender Betriebszeit durch Informationen aus dem \ac{pac} verbessert um die Ursachenanalyse genauer zu machen.  
+
+\textcolor{green}{Sch\"one Methode, welche statische Verfahren (\ac{pac}) mit Prozesswissen (\ac{bbn}) vereint, die ben\"otigten Daten zum Gesamtprozess, welche f\"ur \ac{pac} notwendig sind, liegen bei modularen Anlagen aber nicht vor $\mapsto$ bringt nichts}
+
+\subsection{Rezensionen}
+\begin{itemize}
+\item Einf\"uhrung in \cite{Zhang_2017}: \textcolor{green}{\"Ubersicht datenbasierte Methoden}
+\item Einf\"uhrung in \cite{Yang_2010}: \textcolor{green}{Entwicklung von Methoden zu \ac{sdg}}
+\item Einf\"uhring in \cite{Mallick_2013}: \textcolor{green}{Verweise auf mehrere Methoden/Anwendungen von \ac{sdg}}
+\item Einf\"uhrung in \cite{Cai_2015} \textcolor{red}{Methoden zur makroskopischen Fehlerfortpflanzung $\mapsto$ genau das will ich eigentlich }
+\item Einf\"uhrung in \cite{Wang_2016}: Datenbasierte Fehlerfortpflanzung
+\item \cite{Thornhill_2006}: Datenbasierte Fehlerfortpflanzung
+\item \cite{Yin_2014}: Datenbasierte Fehlerfortpflanzung
+\item \cite{Varga_2013}: Datenbasierte Fehlerfortpflanzung
+\item \cite{Hwang_2010}: Modellbasierte und stochastische Methoden der Fehlerfortpflanzung; Reglerneueinstellung nach Fehlererkennung
+\item \cite{Venkatasubramanian_2003}: \textcolor{green}{quantitative modellbasierte Methoden}
+\item \cite{Venkatasubramanian_2003a}: \textcolor{green}{qualitative modellbasierte Methoden}
+\item \cite{Venkatasubramanian_2003b}: \textcolor{green}{datenbasierte Methoden}
+\item \cite{Ng_2010}
+\item \cite{Zhang2008} \textcolor{green}{Umfassende \"Ubersicht zum Thema Fehlerfortpflanzung und Fehleridentifikation}
+\item \cite{Yang2012}
+\item \cite{Duan2014}: \textcolor{green}{Ursachenanalyse von anlagenweiten, schwingenden Fehlern}
+\item Einf\"uhrung in \cite{Li_2016}: \textcolor{green}{\"Ubersicht zu datenbasierten Methoden}
+\end{itemize}
+
+
+\subsection{unsortiert}
+\paragraph*{\cite{Bartolozzi_2000}} Qualitative models of equipment units and their use in automatic {HAZOP} analysis
+
+\subsubsection{\cite{Kavcic_2001}}
+
+
+
+
+
+
+
+
+
 \section{Modularisierung}
 \paragraph*{\cite{Bramsiepe_2012}} Sichtweisen auf die Modularisierung chem. Produktionsanlagen. Anforderungen an Module. Grundlegende Gedanken und notwendige Schritte zur Verwendung von Modulen. \hfill \newline
 Verk\"urzte Lebenszyklen chemischer Produkte und st\"arker schwankende Absatzm\"arkte erfordern k\"urzere Entwicklungszeiten neuer Produkte. Modularisierte Anlagenteile wurden als m\"ogliches Mittel identifiziert, um bereits gewonnenes Wissen wiederverwenden zu k\"onnen und so Entwicklungszyklen zu beschleunigen. Aus wirtschaftlicher Sicht konnte die Sinnhaftigkeit kleinskaliger Anlagen bereits gezeigt werden (Quellen sie diese Arbeit). Diese erlauben hohe Flexibilit\"at und eine schnelle Anpassung der Produktionskapazit\"at an Marktver\"anderungen. Mit Hilfe kleinskaliger Anlagen k\"onnen insbesondere Zwischenprodukte einzeln und \"ortlich verteilt hergestellt werden. Die Weiterverarbeitung zu einem Endprodukt erfordert dann nur noch den Transport dieser Zwischenprodukte und nicht mehr den Transport aller Ausgangsstoffe. Dadurch sinkt das zur Endproduktgewinnung notwendige Transportvolumen und damit die Kosten. Ein weiterer Vorteil der Modularisierung ist die M\"oglichkeit einen Gro\ss{}teil der Anlagenmontage an einem beliebigen Ort unter optimalen Bedingungen vornehmen zu k\"onnen. Am Aufstellungsort der Anlage m\"ussen die Module dann nur noch verbunden werden. Dies ist insbesondere bei klimatisch anspruchsvollen Anlagenstandorten sehr hilfreich. Ein Modul muss derart definiert werden, dass es einen hohen Grad an Wiederverwendbarkeit besitzt und l\"osgel\"ost von einer Gesamtanlage getestet werden kann. Module sollten nach ihrem Detaillierungsgrad unterschieden werden. Die Aufteilung in Planungsmodule und Variantenmodule wird als sinnvoll erachtet. Variantenmodule werden in 2D und 3D Varianten unterteilt. Ein 2D Variantenmodul soll Informationen enthalten, welche am Ende des Basic Engineering vorhanden sind. Dies umfasst alle Informationen, welche zum Entwurf eines R\& I Flie\ss{}bildes f\"ur ein Modul notwendig sind. Ein 3D Variantemodul ist um Auslegungsgr\"o\ss{}en derart erweitert, dass die Modulfertigung m\"oglich ist. Weiterhin sind der Planungs- und Entwicklungsprozess geeignet dokumentiert. Die konkrete Auslegung der 3D Variantenmodule kann direkt durch einen Equipmentlieferanten durchgef\"uhrt werden, wenn dieser detaillierte Modulanforderungen und Raumforderungen erh\"alt. Insbesondere eine genau Definition der Schnittstellen ist hierbei notwendig.  
