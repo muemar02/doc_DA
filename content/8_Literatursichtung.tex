@@ -386,78 +386,69 @@ Verfahren zur Fehlerbetrachtung werden in off-line und on-line Modelle unterschi
 
 \section{Modularisierung}
 
+%\paragraph*{\cite{Bramsiepe_2012}} Sichtweisen auf die Modularisierung chem. Produktionsanlagen. Anforderungen an Module. Grundlegende Gedanken und notwendige Schritte zur Verwendung von Modulen. \hfill \newline
+%Verk\"urzte Lebenszyklen chemischer Produkte und st\"arker schwankende Absatzm\"arkte erfordern k\"urzere Entwicklungszeiten neuer Produkte. Modularisierte Anlagenteile wurden als m\"ogliches Mittel identifiziert, um bereits gewonnenes Wissen wiederverwenden zu k\"onnen und so Entwicklungszyklen zu beschleunigen. Aus wirtschaftlicher Sicht konnte die Sinnhaftigkeit kleinskaliger Anlagen bereits gezeigt werden (Quellen sie diese Arbeit). Diese erlauben hohe Flexibilit\"at und eine schnelle Anpassung der Produktionskapazit\"at an Marktver\"anderungen. Mit Hilfe kleinskaliger Anlagen k\"onnen insbesondere Zwischenprodukte einzeln und \"ortlich verteilt hergestellt werden. Die Weiterverarbeitung zu einem Endprodukt erfordert dann nur noch den Transport dieser Zwischenprodukte und nicht mehr den Transport aller Ausgangsstoffe. Dadurch sinkt das zur Endproduktgewinnung notwendige Transportvolumen und damit die Kosten. Ein weiterer Vorteil der Modularisierung ist die M\"oglichkeit einen Gro\ss{}teil der Anlagenmontage an einem beliebigen Ort unter optimalen Bedingungen vornehmen zu k\"onnen. Am Aufstellungsort der Anlage m\"ussen die Module dann nur noch verbunden werden. Dies ist insbesondere bei klimatisch anspruchsvollen Anlagenstandorten sehr hilfreich. Ein Modul muss derart definiert werden, dass es einen hohen Grad an Wiederverwendbarkeit besitzt und l\"osgel\"ost von einer Gesamtanlage getestet werden kann. Module sollten nach ihrem Detaillierungsgrad unterschieden werden. Die Aufteilung in Planungsmodule und Variantenmodule wird als sinnvoll erachtet. Variantenmodule werden in 2D und 3D Varianten unterteilt. Ein 2D Variantenmodul soll Informationen enthalten, welche am Ende des Basic Engineering vorhanden sind. Dies umfasst alle Informationen, welche zum Entwurf eines R\& I Flie\ss{}bildes f\"ur ein Modul notwendig sind. Ein 3D Variantemodul ist um Auslegungsgr\"o\ss{}en derart erweitert, dass die Modulfertigung m\"oglich ist. Weiterhin sind der Planungs- und Entwicklungsprozess geeignet dokumentiert. Die konkrete Auslegung der 3D Variantenmodule kann direkt durch einen Equipmentlieferanten durchgef\"uhrt werden, wenn dieser detaillierte Modulanforderungen und Raumforderungen erh\"alt. Insbesondere eine genau Definition der Schnittstellen ist hierbei notwendig.  
+%Ein Planungsmodul bietet Ans\"atze zu Auswahl, Funktionsumfang, Auslegung und Dimensionierung von Variantenmodulen. Planungsmodule stellen also in erster Linie einen Wissensspeicher dar und dienen der Darstellung der Vielfalt von Variantenmodulen. Wird durch einen Wissens-/ Erfahrungsgewinn ein bestehendes Variantenmodul weiterentwickelt, so m\"ussen die Planungsmodule erweitert und angepasst werden.
+%Im Planungsprozess hat der Detaillierungsgrad der verwendeten Variantenmodule ma\ss{}geblichen Einfluss. 2D Module erleichtern die Erzeugung von Flie\ss{}bildern einer Gesamtanlage. Insbesondere erm\"oglichen sie den einfachen Vergleich verschiedener Anlagenstrukturen. Es wird auf Literatur verwiesen, welche die zur Erlangung von 2D und 3D Modulen notwendigen Arbeitsschritte darlegen. Mit Hilfe von Simulationen k\"onnen in Kombination mit Planungsmodulen geeignete 3D Module f\"ur einen Prozess ausgew\"ahlt werden. Da diese nur in definierten Gr\"o\ss{}en zur Verf\"ugung stehen wird der Prozess aber wahrscheinlich nicht optimal umgesetzt. Dies muss bei der Planung beachtet werden, z. B. indem der Verfahrensprozess an vorhandene Modulgr\"o\ss{}en angepasst wird. Auf ein solches Vorgehen wird verwiesen (\cite{Seifert_2012}). Bei der Entwicklung von Regelungs- und Sicherheitskonzepten muss betrachtet werden, welche Aufgaben ein einzelnes Modul losgel\"ost vom Gesamtsystem erf\"ullen kann und welche Aufgaben nur im Zusammenspiel mehrerer Module gel\"ost werden k\"onnen. Die implementierten F\"ahigkeiten des Module bestimmen also ma\ss{}geblich den Entwicklungsaufwand neuer Sicherheitsfunktionen einer Gesamtanlage. 
+%Die einzelnen Schritte der Projektplanung \"uerlappen sich bei der Verwendung von Modulen zwangsl\"aufig. Um eine effiziente und effektive Projektplanung sicherzustellen ist daher die Entwicklung eines geeigneten Datenformates notwendig. Nur so kann eine st\"andige Weitergabe und Verf\"ugbarkeit notwendiger Information gew\"ahrleistet werden.  
+%Notwendige Forschungsarbeiten, um Module verwenden zu k\"onnen: \begin{itemize}
+%\item Systematischer Entwurf von 2D, 3D Variantemodulen und Planungsmodulen(Systematik des Modulentwurfs definieren)
+%\item Berechnungsmodelle zum Scale-Up von Modulen
+%\item Simulationsmodelle von Modulen, um deren Variantenauswahl und konkrete Auslegung durchf\"uhren zu k\"onnen
+%\item (Weiter-) Entwicklung von Ans\"atzen, wie Module konkret in den Planungsprozess integriert werden k\"onnen
+%\item Entwicklung eines Datenmodell um Datenaustausch und Datenanreichung zu erm\"oglichen
+%\end{itemize}
+%\hfill \newline
+%\textcolor{green}{Inhaltlich fertig.} \textcolor{red}{Arbeiten, welche diesen Artikel zitieren, sind wahrscheinlich hilfreich}.
 
+%\paragraph*{\cite{Kampczyk_2003}}
+%Vorstellung eines CAE-Tools zur Anlagenplanung, insbesondere zur Wahl der Positionierung von Anlagenkomponenten, Entwicklung der Vorrohrung und dem Stahlbau. Durch Vorgabe von Nutzerw\"unschen wird auf Basis einer Wissensdatenbank die optimale Positionierung und Leitungsf\"uhrung berechnet, indem alle Varianten (oder eine definierbare Anzahl an Iterationen) an m\"oglichen Kombinationen automatisch durch einen Optimierer berechnet und bewertet wird. Durch Definition von Modulen wird die Anzahl m\"oglicher Varianten reduziert und der Rechenaufwand reduziert. Au\ss{}erdem k\"onnen best-practice L\"osung direkt vorgegeben werden. \hfill \newline
+%Modul $=$ Ausr\"ustungen, welche Teil des gleichen Prozessschrittes sind. \textcolor{red}{Diese Arbeit hilft die verschiedenen Verst\"andnisse vom Modulbegriff darzulegen}.
 
+%\paragraph*{\cite{Hady_2012}}
+%Das vorgestellte Konzept umfasst die Definition und Identifizierung von Modulen, deren dreidimensionales Design, die Ablage und Know-how-Sicherung zwecks der Wiederverwendung des Engineering und der Ausrüstungen sowie die Planung und Kostenschätzung mit wiederverwendbaren Modulen.\textcolor{red}{Arbeiten, welche diesen Artikel zitieren, sind wahrscheinlich hilfreich}.
 
+%\paragraph*{\cite{Urbas_2012}} \textcolor{red}{\"Ubersichtsbeitrag Modularisierung, offene Forschungsfragen}
 
-
-
-\paragraph*{\cite{Bramsiepe_2012}} Sichtweisen auf die Modularisierung chem. Produktionsanlagen. Anforderungen an Module. Grundlegende Gedanken und notwendige Schritte zur Verwendung von Modulen. \hfill \newline
-Verk\"urzte Lebenszyklen chemischer Produkte und st\"arker schwankende Absatzm\"arkte erfordern k\"urzere Entwicklungszeiten neuer Produkte. Modularisierte Anlagenteile wurden als m\"ogliches Mittel identifiziert, um bereits gewonnenes Wissen wiederverwenden zu k\"onnen und so Entwicklungszyklen zu beschleunigen. Aus wirtschaftlicher Sicht konnte die Sinnhaftigkeit kleinskaliger Anlagen bereits gezeigt werden (Quellen sie diese Arbeit). Diese erlauben hohe Flexibilit\"at und eine schnelle Anpassung der Produktionskapazit\"at an Marktver\"anderungen. Mit Hilfe kleinskaliger Anlagen k\"onnen insbesondere Zwischenprodukte einzeln und \"ortlich verteilt hergestellt werden. Die Weiterverarbeitung zu einem Endprodukt erfordert dann nur noch den Transport dieser Zwischenprodukte und nicht mehr den Transport aller Ausgangsstoffe. Dadurch sinkt das zur Endproduktgewinnung notwendige Transportvolumen und damit die Kosten. Ein weiterer Vorteil der Modularisierung ist die M\"oglichkeit einen Gro\ss{}teil der Anlagenmontage an einem beliebigen Ort unter optimalen Bedingungen vornehmen zu k\"onnen. Am Aufstellungsort der Anlage m\"ussen die Module dann nur noch verbunden werden. Dies ist insbesondere bei klimatisch anspruchsvollen Anlagenstandorten sehr hilfreich. Ein Modul muss derart definiert werden, dass es einen hohen Grad an Wiederverwendbarkeit besitzt und l\"osgel\"ost von einer Gesamtanlage getestet werden kann. Module sollten nach ihrem Detaillierungsgrad unterschieden werden. Die Aufteilung in Planungsmodule und Variantenmodule wird als sinnvoll erachtet. Variantenmodule werden in 2D und 3D Varianten unterteilt. Ein 2D Variantenmodul soll Informationen enthalten, welche am Ende des Basic Engineering vorhanden sind. Dies umfasst alle Informationen, welche zum Entwurf eines R\& I Flie\ss{}bildes f\"ur ein Modul notwendig sind. Ein 3D Variantemodul ist um Auslegungsgr\"o\ss{}en derart erweitert, dass die Modulfertigung m\"oglich ist. Weiterhin sind der Planungs- und Entwicklungsprozess geeignet dokumentiert. Die konkrete Auslegung der 3D Variantenmodule kann direkt durch einen Equipmentlieferanten durchgef\"uhrt werden, wenn dieser detaillierte Modulanforderungen und Raumforderungen erh\"alt. Insbesondere eine genau Definition der Schnittstellen ist hierbei notwendig.  
-Ein Planungsmodul bietet Ans\"atze zu Auswahl, Funktionsumfang, Auslegung und Dimensionierung von Variantenmodulen. Planungsmodule stellen also in erster Linie einen Wissensspeicher dar und dienen der Darstellung der Vielfalt von Variantenmodulen. Wird durch einen Wissens-/ Erfahrungsgewinn ein bestehendes Variantenmodul weiterentwickelt, so m\"ussen die Planungsmodule erweitert und angepasst werden.
-Im Planungsprozess hat der Detaillierungsgrad der verwendeten Variantenmodule ma\ss{}geblichen Einfluss. 2D Module erleichtern die Erzeugung von Flie\ss{}bildern einer Gesamtanlage. Insbesondere erm\"oglichen sie den einfachen Vergleich verschiedener Anlagenstrukturen. Es wird auf Literatur verwiesen, welche die zur Erlangung von 2D und 3D Modulen notwendigen Arbeitsschritte darlegen. Mit Hilfe von Simulationen k\"onnen in Kombination mit Planungsmodulen geeignete 3D Module f\"ur einen Prozess ausgew\"ahlt werden. Da diese nur in definierten Gr\"o\ss{}en zur Verf\"ugung stehen wird der Prozess aber wahrscheinlich nicht optimal umgesetzt. Dies muss bei der Planung beachtet werden, z. B. indem der Verfahrensprozess an vorhandene Modulgr\"o\ss{}en angepasst wird. Auf ein solches Vorgehen wird verwiesen (\cite{Seifert_2012}). Bei der Entwicklung von Regelungs- und Sicherheitskonzepten muss betrachtet werden, welche Aufgaben ein einzelnes Modul losgel\"ost vom Gesamtsystem erf\"ullen kann und welche Aufgaben nur im Zusammenspiel mehrerer Module gel\"ost werden k\"onnen. Die implementierten F\"ahigkeiten des Module bestimmen also ma\ss{}geblich den Entwicklungsaufwand neuer Sicherheitsfunktionen einer Gesamtanlage. 
-Die einzelnen Schritte der Projektplanung \"uerlappen sich bei der Verwendung von Modulen zwangsl\"aufig. Um eine effiziente und effektive Projektplanung sicherzustellen ist daher die Entwicklung eines geeigneten Datenformates notwendig. Nur so kann eine st\"andige Weitergabe und Verf\"ugbarkeit notwendiger Information gew\"ahrleistet werden.  
-Notwendige Forschungsarbeiten, um Module verwenden zu k\"onnen: \begin{itemize}
-\item Systematischer Entwurf von 2D, 3D Variantemodulen und Planungsmodulen(Systematik des Modulentwurfs definieren)
-\item Berechnungsmodelle zum Scale-Up von Modulen
-\item Simulationsmodelle von Modulen, um deren Variantenauswahl und konkrete Auslegung durchf\"uhren zu k\"onnen
-\item (Weiter-) Entwicklung von Ans\"atzen, wie Module konkret in den Planungsprozess integriert werden k\"onnen
-\item Entwicklung eines Datenmodell um Datenaustausch und Datenanreichung zu erm\"oglichen
-\end{itemize}
-\hfill \newline
-\textcolor{green}{Inhaltlich fertig.} \textcolor{red}{Arbeiten, welche diesen Artikel zitieren, sind wahrscheinlich hilfreich}.
-
-\paragraph*{\cite{Kampczyk_2003}}
-Vorstellung eines Rechnerwerkzeugs zur Anlagenplanung \hfill \newline
-Modul $=$ Ausr\"ustungen, welche Teil des gleichen Prozessschrittes sind. \textcolor{red}{Diese Arbeit hilft die verschiedenen Verst\"andnisse vom Modulbegriff darzulegen}.
-
-\paragraph*{\cite{Hady_2012}}
-Das vorgestellte Konzept umfasst die Definition und Identifizierung von Modulen, deren dreidimensionales Design, die Ablage und Know-how-Sicherung zwecks der Wiederverwendung des Engineering und der Ausrüstungen sowie die Planung und Kostenschätzung mit wiederverwendbaren Modulen.\textcolor{red}{Arbeiten, welche diesen Artikel zitieren, sind wahrscheinlich hilfreich}.
-
-\paragraph*{\cite{Urbas_2012}} \textcolor{red}{\"Ubersichtsbeitrag Modularisierung, offene Forschungsfragen}
-
-\paragraph*{\cite{Lier_2016}} Relevanz modularisierter Anlagen
-
-\paragraph*{\cite{Obst_2013}} Relevanz modularisierter Anlagen
-
-\paragraph*{\cite{Ohle_2014}} Konkretes Beispiel einer Modularen Anlage
+%\paragraph*{\cite{Lier_2016}} Relevanz modularisierter Anlagen
+%
+%\paragraph*{\cite{Obst_2013}} Relevanz modularisierter Anlagen
+%
+%\paragraph*{\cite{Ohle_2014}} Konkretes Beispiel einer Modularen Anlage
 
 
  
- \paragraph*{\cite{Uzuner_2012}, \cite{Uzuner_2013}} Ans\"atze im Paper, Details in der Dissertation \hfill \newline
-Die Entwicklung des R{\&}I-Flie{\ss}bild ist ein wichtiger Schritt eines Anlagenprojektes. In der Arbeit wird gezeigt, wie dieser Prozess durch Unterteilung einer Gesamtanlage in wiederverwendbare Funktionsgruppen (=Module bzw. EQM) und die Verwendung einer wissensbasierten Software geeignet beschleunigt werden kann. Module sollen derart definiert werden, dass sie prozesstechnisch sinnvoll sind und einen m\"oglichst hohen Grad an Wiederverwendbarkeit aufweisen. Ein solches Modul wird als Equipment-Modul (EQM) bezeichnet; gemeint sind damit Standard-Prozesseinheiten wie Pumpen, Verdichter, W\"arme\"ubertrager, Beh\"alter, Reaktoren, Kolonnen. Ein EQM erf\"ullt dann eine prozesstechnische Funktion und umfasst einen Apparat/Eine Maschine und weiterhin die notwendigen Elemente der Sicherheitstechnik, Regelungstechnik, Nahverrohrung und Instrumentierung. F\"ur solche EQM wurden R{\&}I-Flie{\ss}bilder entworfen. Ein EQM kann dabei in Subsysteme zerlegt werden, welche derart definiert werden, dass sie anschlussfertige Elemente f\"ur EQM bilden (z. B. Teilmodul, Baugruppe, Unterbaugruppe). Diese Verschachtelung erfordert eine Erweiterung der \textcolor{red}{NE33 - Datei besorgen}. Der Zusammenbau eines EQM zur Erf\"ullung einer bestimmten Funktion kann durch Kombination verschiedener Subsystemen geschehen (verschiedene Kombinationen bilden verschiedene EQM zur Erf\"ullung der gleichen Aufgabe). Dadurch k\"onnen neue oder abge\"anderte Prozesse flexibel realisiert und Variationen eines EQM bez\"uglich der Kosten verglichen werden. Bereits entworfene EQM bilden die Basis der wissensbasierten SW. Neue EQM und deren Subsysteme erweitern die SW. Neue Anlagen werden dann aus diesem Datenhaushalt - den bereits geplanten Modulen - entworfen, oder die Datenbasis wird zuerst erweitert. Bereits geleistete Entwicklungsarbeit kann so wiederverwendet werden. Durch die Verwendung von Standardbausteinen sinkt die Entwicklungsdauer, wird die Qualit\"at der Planungsarbeit erh\"oht, erlangtes Wissen nachvollziehbar gespeichert und die Dokumentation von Designentscheidungen erleichtert. Die Struktur der SW und die Handhabung/ der Nutzen der SW im Workflow werden erl\"autert. Der Planungsgrad ist auf 2-D Level. Die r\"aumliche Anordnung von Komponenten eines EQM wird nicht betrachtet/ modelliert. \textcolor{green}{fertig}
+% \paragraph*{\cite{Uzuner_2012}, \cite{Uzuner_2013}} Ans\"atze im Paper, Details in der Dissertation \hfill \newline
+%Die Entwicklung des R{\&}I-Flie{\ss}bild ist ein wichtiger Schritt eines Anlagenprojektes. In der Arbeit wird gezeigt, wie dieser Prozess durch Unterteilung einer Gesamtanlage in wiederverwendbare Funktionsgruppen (=Module bzw. EQM) und die Verwendung einer wissensbasierten Software geeignet beschleunigt werden kann. Module sollen derart definiert werden, dass sie prozesstechnisch sinnvoll sind und einen m\"oglichst hohen Grad an Wiederverwendbarkeit aufweisen. Ein solches Modul wird als Equipment-Modul (EQM) bezeichnet; gemeint sind damit Standard-Prozesseinheiten wie Pumpen, Verdichter, W\"arme\"ubertrager, Beh\"alter, Reaktoren, Kolonnen. Ein EQM erf\"ullt dann eine prozesstechnische Funktion und umfasst einen Apparat/Eine Maschine und weiterhin die notwendigen Elemente der Sicherheitstechnik, Regelungstechnik, Nahverrohrung und Instrumentierung. F\"ur solche EQM wurden R{\&}I-Flie{\ss}bilder entworfen. Ein EQM kann dabei in Subsysteme zerlegt werden, welche derart definiert werden, dass sie anschlussfertige Elemente f\"ur EQM bilden (z. B. Teilmodul, Baugruppe, Unterbaugruppe). Diese Verschachtelung erfordert eine Erweiterung der \textcolor{red}{NE33 - Datei besorgen}. Der Zusammenbau eines EQM zur Erf\"ullung einer bestimmten Funktion kann durch Kombination verschiedener Subsystemen geschehen (verschiedene Kombinationen bilden verschiedene EQM zur Erf\"ullung der gleichen Aufgabe). Dadurch k\"onnen neue oder abge\"anderte Prozesse flexibel realisiert und Variationen eines EQM bez\"uglich der Kosten verglichen werden. Bereits entworfene EQM bilden die Basis der wissensbasierten SW. Neue EQM und deren Subsysteme erweitern die SW. Neue Anlagen werden dann aus diesem Datenhaushalt - den bereits geplanten Modulen - entworfen, oder die Datenbasis wird zuerst erweitert. Bereits geleistete Entwicklungsarbeit kann so wiederverwendet werden. Durch die Verwendung von Standardbausteinen sinkt die Entwicklungsdauer, wird die Qualit\"at der Planungsarbeit erh\"oht, erlangtes Wissen nachvollziehbar gespeichert und die Dokumentation von Designentscheidungen erleichtert. Die Struktur der SW und die Handhabung/ der Nutzen der SW im Workflow werden erl\"autert. Der Planungsgrad ist auf 2-D Level. Die r\"aumliche Anordnung von Komponenten eines EQM wird nicht betrachtet/ modelliert. \textcolor{green}{fertig}
 
-\paragraph*{\cite{Lang_2012}} Die aus Standard-Modulen aufgebaute Anlage hat sich bisher noch nicht im gro\ss{}en Ziel durchgesetzt. Im Bereich der Kleinanlagen ist die Entwicklung von Containermodulen jedoch weit voran geschritten. Es existiert bereits wenigstens ein kommerzielles Produkt - der \textit{Evotrainer}. \textcolor{green}{fertig}
+%\paragraph*{\cite{Lang_2012}} Die aus Standard-Modulen aufgebaute Anlage hat sich bisher noch nicht im gro\ss{}en Ziel durchgesetzt. Im Bereich der Kleinanlagen ist die Entwicklung von Containermodulen jedoch weit voran geschritten. Es existiert bereits wenigstens ein kommerzielles Produkt - der \textit{Evotrainer}. \textcolor{green}{fertig}
 
-\paragraph*{\cite{Rottke_2012}} Am Beispiel einer Anlage zur Hochleistungsfl\"ussigkeitschromatographie (welche in der Literatur detailliert beschrieben ist) wird gezeigt, wie der Ansatz der modularisierten Anlage praktisch genutzt werden kann. Der Prozess wird in Module zerlegt, welche in verschiedenen Skalierungsvarianten entworfen werden. Die zus\"atzlichen Kosten, wenn ein Modul in Zwischengr\"o\ss{}e ben\"otigt wird, wird dargelegt. Es wird ein Paket an Werkzeugen vorgestellt, mit Hilfe derer die ben\"otigte Dimensionierung von Modulen f\"ur einen Prozess durch Simulation berechnet wird und eine kostenbasierte Empfehlung abgegeben, welche Modulvariante aus einem Katalog definierten Gr\"o\ss{}en gew\"ahlt werden sollte. \hfill \newline
-Ein Ansatz der deutschen Anlagenbauer und -betreiber ist die Entwicklung von High--Tech--Produkten um im globalen Wettbewerb erfolgreich zu bleiben. Dazu ist unter anderem eine stark verk\"urzte Projektzeit bei der Entwicklung neuer Produkte notwendig. Die Verwendung von Modulen bei der Prozessentwicklung ist ein m\"oglicher Ansatz. Im ersten Schritt ist allerdings ein erh\"ohter Engineering Aufwand zur Definition und Erstellung/Beschreibung von Modulen notwendig. Dieser Mehraufwand ist gerechtfertigt, wenn ein entworfenes Modul mehrfach verwendet werden kann. Die erbrachte Engineering--Leistung kann damit wiederverwendet werden. Insbesondere die Dokumentation, wie ein Modul entstanden ist (die konkreten Designentscheidungen) ist daf\"ur notwendig.  \hfill \newline
-Das R{\&}I-Flie{\ss}bild wird so erstellt, dass einzelne Komponenten (die Module) frei ausgetauscht werden k\"onnen. Module m\"ussen also \"uber definierte Schnittstellen verf\"ugen und klar definierte Verfahrenstechnische Prozessschritte erf\"ullen. Weiterhin sollten Module einzeln testbar und skalierbar sein. Wurde eine Anlage so geplant, dass Module austauschbar sind, so kann ein erh\"ohter Bedarf an Produktionsmenge durch Skalierung der Module befriedigt werden. Module sollten daher in definierten Gr\"o\ss{}en entworfen werden. Je nach Anwendungsfall wird dann die am Besten passende Gr\"o\ss{}e ausgew\"ahlt. Der Prozess wird dadurch nicht mehr optimal erf\"ullt (das Modul wird immer etwas \"uberdimensioniert sein, je nach dem wie weit die n\"achte Modulgr\"o\\ss{}e von der eigentlich erforderlichen Gr\"o\ss{} weg ist), daf\"ur l\"auft die Planung aber deutlich schneller ab. Am Beispiel der Hochleistungsfl\"ussigkeitschromatographie wird gezeigt, wie ein Verfahren in Module zerlegt werden kann. Die Module werden f\"ur verschiedene Produktionsmengen entworfen (also Stufenweise). Die Auswirkung auf die Kosten einer Anlage mit nicht-optimalen Modulen bzgl. der Gr\"o\ss{} wird dargelegt. Nachteil einer modularen Bauweise ist, dass sonderw\"unsche von Kunden nur kompliziert erf\"ullt werden k\"onnen. Im Fall von Defekten ist ein Austausch von Ger\"aten daf\"ur wesentlich preiswerter, da eben keine Sonderanfertigungen gemacht werden. Ein Anlagenhersteller gelangt durch die wiederholte Verwendung eines Moduls au\ss{}erdem zu mehr Erfahren/ Detailwissen und kann damit Bedienbesonderheiten und Anwendungspotential eines Moduls besser ausssch\"opfen (und dieses Wissen an den Anlagenbetreiber weiter geben). Insbesondere Schulungen zum Betrieb der Anlage sind fr\"uzeitig im Entwicklungsprozess m\"oglich. Der Prozess wird daher sicherer (lernen aus Erfahrung einfacher, vor allem bzgl. Bedienung und Designfehlern). Zus\"atzlich werden Module vom Layout her bez\"uglich Kosten und Funktion optimiert. Man erkauft sich also durch eine \"Uberdimensionierung der Anlage bez\"uglich der notwendigen Gr\"o\ss{}e (da Gr\"o\ss{}e nicht optimiert wird) durch eine schnelle Planung und Module, welche ihre Funktion optimal erf\"ullen, ein optimales Layout haben und durch mehr Erfahrung besonders sicher sind. Liegt eine erforderliche Modulgr\"o\ss{}e zu weit weg von bereits designten Modulgr\"o\ss{}en, so wird das bekannte Modul sinnvollerweise neu skaliert oder der Kunde lebt mit nicht-optimalem Prozess. Bei Neu-Skalierung kann vorhandenes Wissen \"uber Layout des Moduls aber wieder verwendet werden -> ist also nicht sooo schlimm. 
+%\paragraph*{\cite{Rottke_2012}} Am Beispiel einer Anlage zur Hochleistungsfl\"ussigkeitschromatographie (welche in der Literatur detailliert beschrieben ist) wird gezeigt, wie der Ansatz der modularisierten Anlage praktisch genutzt werden kann. Der Prozess wird in Module zerlegt, welche in verschiedenen Skalierungsvarianten entworfen werden. Die zus\"atzlichen Kosten, wenn ein Modul in Zwischengr\"o\ss{}e ben\"otigt wird, wird dargelegt. Es wird ein Paket an Werkzeugen vorgestellt, mit Hilfe derer die ben\"otigte Dimensionierung von Modulen f\"ur einen Prozess durch Simulation berechnet wird und eine kostenbasierte Empfehlung abgegeben, welche Modulvariante aus einem Katalog definierten Gr\"o\ss{}en gew\"ahlt werden sollte. \hfill \newline
+%Ein Ansatz der deutschen Anlagenbauer und -betreiber ist die Entwicklung von High--Tech--Produkten um im globalen Wettbewerb erfolgreich zu bleiben. Dazu ist unter anderem eine stark verk\"urzte Projektzeit bei der Entwicklung neuer Produkte notwendig. Die Verwendung von Modulen bei der Prozessentwicklung ist ein m\"oglicher Ansatz. Im ersten Schritt ist allerdings ein erh\"ohter Engineering Aufwand zur Definition und Erstellung/Beschreibung von Modulen notwendig. Dieser Mehraufwand ist gerechtfertigt, wenn ein entworfenes Modul mehrfach verwendet werden kann. Die erbrachte Engineering--Leistung kann damit wiederverwendet werden. Insbesondere die Dokumentation, wie ein Modul entstanden ist (die konkreten Designentscheidungen) ist daf\"ur notwendig.  \hfill \newline
+%Das R{\&}I-Flie{\ss}bild wird so erstellt, dass einzelne Komponenten (die Module) frei ausgetauscht werden k\"onnen. Module m\"ussen also \"uber definierte Schnittstellen verf\"ugen und klar definierte Verfahrenstechnische Prozessschritte erf\"ullen. Weiterhin sollten Module einzeln testbar und skalierbar sein. Wurde eine Anlage so geplant, dass Module austauschbar sind, so kann ein erh\"ohter Bedarf an Produktionsmenge durch Skalierung der Module befriedigt werden. Module sollten daher in definierten Gr\"o\ss{}en entworfen werden. Je nach Anwendungsfall wird dann die am Besten passende Gr\"o\ss{}e ausgew\"ahlt. Der Prozess wird dadurch nicht mehr optimal erf\"ullt (das Modul wird immer etwas \"uberdimensioniert sein, je nach dem wie weit die n\"achte Modulgr\"o\\ss{}e von der eigentlich erforderlichen Gr\"o\ss{} weg ist), daf\"ur l\"auft die Planung aber deutlich schneller ab. Am Beispiel der Hochleistungsfl\"ussigkeitschromatographie wird gezeigt, wie ein Verfahren in Module zerlegt werden kann. Die Module werden f\"ur verschiedene Produktionsmengen entworfen (also Stufenweise). Die Auswirkung auf die Kosten einer Anlage mit nicht-optimalen Modulen bzgl. der Gr\"o\ss{} wird dargelegt. Nachteil einer modularen Bauweise ist, dass sonderw\"unsche von Kunden nur kompliziert erf\"ullt werden k\"onnen. Im Fall von Defekten ist ein Austausch von Ger\"aten daf\"ur wesentlich preiswerter, da eben keine Sonderanfertigungen gemacht werden. Ein Anlagenhersteller gelangt durch die wiederholte Verwendung eines Moduls au\ss{}erdem zu mehr Erfahren/ Detailwissen und kann damit Bedienbesonderheiten und Anwendungspotential eines Moduls besser ausssch\"opfen (und dieses Wissen an den Anlagenbetreiber weiter geben). Insbesondere Schulungen zum Betrieb der Anlage sind fr\"uzeitig im Entwicklungsprozess m\"oglich. Der Prozess wird daher sicherer (lernen aus Erfahrung einfacher, vor allem bzgl. Bedienung und Designfehlern). Zus\"atzlich werden Module vom Layout her bez\"uglich Kosten und Funktion optimiert. Man erkauft sich also durch eine \"Uberdimensionierung der Anlage bez\"uglich der notwendigen Gr\"o\ss{}e (da Gr\"o\ss{}e nicht optimiert wird) durch eine schnelle Planung und Module, welche ihre Funktion optimal erf\"ullen, ein optimales Layout haben und durch mehr Erfahrung besonders sicher sind. Liegt eine erforderliche Modulgr\"o\ss{}e zu weit weg von bereits designten Modulgr\"o\ss{}en, so wird das bekannte Modul sinnvollerweise neu skaliert oder der Kunde lebt mit nicht-optimalem Prozess. Bei Neu-Skalierung kann vorhandenes Wissen \"uber Layout des Moduls aber wieder verwendet werden -> ist also nicht sooo schlimm. 
 
-\paragraph*{\cite{Obst_2013b}} Automatisierung im Life Cycle modularer Anlagen
+%\paragraph*{\cite{Obst_2013b}} Automatisierung im Life Cycle modularer Anlagen
+%
+%\paragraph*{\cite{Urbas_2012a}} Automatisierung von Prozessmodulen
 
-\paragraph*{\cite{Urbas_2012a}} Automatisierung von Prozessmodulen
+%\paragraph*{\cite{Fleischer_2016}} Planungsansatz f{\"u}r modulare Anlagen in der chemischen Industrie. Viele Literaturreferenze, sehr aktueller Text zur Problematik der Verwendung von modularen Anlagen in der Industrie
 
-\paragraph*{\cite{Fleischer_2016}} Planungsansatz f{\"u}r modulare Anlagen in der chemischen Industrie. Viele Literaturreferenze, sehr aktueller Text zur Problematik der Verwendung von modularen Anlagen in der Industrie
+%\paragraph{\cite{Lier_2016a}} Transformable Production Concepts: Flexible, Mobile, Decentralized, Modular, Fast: Bereits verwendete Konzepte werden vorgestellt (F3, Evotrainer, Copiride), die Notwendigkeit modularer Anlagen wird dargelegt, Arbeiten zur Wirtschaftlichkeit werden ausgewertet mit dem Schluss, dass sich besonders bei kurzen Produktlebenszyklen der Einsatz modularer Anlagen lohnt.  
 
-\paragraph{\cite{Lier_2016a}} Transformable Production Concepts: Flexible, Mobile, Decentralized, Modular, Fast
-
-\paragraph*{\cite{Hohmann_2017}} Modules in process industry - A life cycle definition
+%\paragraph*{\cite{Hohmann_2017}} Modules in process industry - A life cycle definition
 
 \subsection{Moduldarstellung}
 
-\paragraph*{\cite{Wassilew_2017}}
+%\paragraph*{\cite{Wassilew_2017}}
 
-\paragraph*{\cite{Obst_2015}} Beschreibung von Prozessmodulen
+%\paragraph*{\cite{Obst_2015}} Beschreibung von Prozessmodulen
+%
+%
+%\paragraph*{\cite{Wassilew_2016}}
+%Zur Darstellung von Modulen wird ein MTP erstellt. Dies entspricht dem in NAMUR vereinbarten Anforderungen? Der Informationsgehalt des MTP kann automatisiert in das Format von OPC UA transformiert werden. Wie das geht, steht in dieser Arbeit.
 
-\paragraph*{\cite{Obst_2014}}Package unit integration for process industry -- A new description approach
 
-\paragraph*{\cite{Wassilew_2016}}
-Zur Darstellung von Modulen wird ein MTP erstellt. Dies entspricht dem in NAMUR vereinbarten Anforderungen? Der Informationsgehalt des MTP kann automatisiert in das Format von OPC UA transformiert werden. Wie das geht, steht in dieser Arbeit.
-
-\paragraph*{\cite{Obst_2013a}}
-Integration einer Package Unit in bestehende Anlage. Vergleich von bekannten Technologien und deren Bewertung.
-
-\paragraph*{\cite{Obst_2015a}} Semantic description of process modules
+%\paragraph*{\cite{Obst_2015a}} Semantic description of process modules
 
 \section{Mini- und Milliplanttechnik}
 %
@@ -477,9 +468,9 @@ Integration einer Package Unit in bestehende Anlage. Vergleich von bekannten Tec
 %\paragraph*{\cite{Kockmann_2012}} Hochskalieren von Anlagen mit Hilfe modularer Konzepte und Mikroreaktoren. \hfill \newline
 %Basierend auf Kennzahlen für die Reaktionskinetik und - enthalpie wird eine \textcolor{red}{Korrelation} abgeleitet und mit der konvektiven Wärmeübertragung als ein Kriterium des \textcolor{red}{sicheren Reaktorbetriebs} gekoppelt.
 
-\paragraph*{\cite{Sell_2013}}
-\textit{Alles nur zitiert!} \hfill \newline
-Die Ergebnisse bisheriger vergleichender Kostenanalysen zwischen diskontinuierlich betriebenen chemischen Verfahren und deren mikroverfahrenstechnischem Pendant haben gezeigt, dass letztere nicht pauschal als kosteneffizientere Alternative gesehen werden können. Es bedarf, wie auch bei Batch-Prozessen, einer umfassenden Prozessoptimierung und Effizienzmaximierung. Dann können mikroverfahrenstechnische Prozesse jedoch trotz teilweise höherer Investitionskosten aufgrund geringerer laufender Kosten und einem schnelleren Zugang zum Markt die ökonomisch günstigere Alternative darstellen. \textcolor{red}{Relevanz von Mikroanlagen}
+%\paragraph*{\cite{Sell_2013}}
+%\textit{Alles nur zitiert!} \hfill \newline
+%Die Ergebnisse bisheriger vergleichender Kostenanalysen zwischen diskontinuierlich betriebenen chemischen Verfahren und deren mikroverfahrenstechnischem Pendant haben gezeigt, dass letztere nicht pauschal als kosteneffizientere Alternative gesehen werden können. Es bedarf, wie auch bei Batch-Prozessen, einer umfassenden Prozessoptimierung und Effizienzmaximierung. Dann können mikroverfahrenstechnische Prozesse jedoch trotz teilweise höherer Investitionskosten aufgrund geringerer laufender Kosten und einem schnelleren Zugang zum Markt die ökonomisch günstigere Alternative darstellen. \textcolor{red}{Relevanz von Mikroanlagen}
 
 %\paragraph*{\cite{Hessel_2012}}Potenzialanalyse von Milli- und Mikroprozesstechniken
 %
@@ -498,7 +489,7 @@ Die Ergebnisse bisheriger vergleichender Kostenanalysen zwischen diskontinuierli
 
 \paragraph*{\cite{Kockmann_2014}} Micro Process Engineering: Fundamentals, Devices, Fabrication, and Applications
 
-\paragraph*{\cite{Sundberg_2014}} Micro-scale Distillation and Microplants in Process Development
+%\paragraph*{\cite{Sundberg_2014}} Micro-scale Distillation and Microplants in Process Development
 
 %\paragraph*{\cite{Hugo_2009}}
 %\textit{Alles nur zitiert!} \hfill \newline
@@ -507,24 +498,18 @@ Die Ergebnisse bisheriger vergleichender Kostenanalysen zwischen diskontinuierli
 
 \section{Weitere}
 
-\paragraph*{\cite{Seifert_2012}} Small scale, modular and continuous: A new approach in plant design. Wird bisher nur zitiert. 
+%\paragraph*{\cite{Seifert_2012}} Small scale, modular and continuous: A new approach in plant design. Wird bisher nur zitiert. 
 
 \paragraph*{\cite{Meier_2012}} Aus einer Reduktion der Planungszeit (welche Ziel der Verwendung von Modulen ist) kann nicht, wie man intuitiv meinen k\"onnte, allgemein auf eine Reduktion des Projektrisikos geschlossen werden. \textcolor{green}{fertig}.
 
 %\paragraph*{\cite{Yang_2017}} wird im Text direkt zitiert, keine weitere Analyse notwendig.
 
-\paragraph*{\cite{Woersdoerfer_2016}} Characterization model for innovative plant designs in the process industry{\textemdash}An application to transformable plants
-
-\paragraph*{\cite{Lugo_2015}} Modular redesign methodology for improving plant layout
-
-\paragraph*{\cite{Regulin_2016}} Improving Transferability Between Different Engineering Stages in the Development of Automated Material Flow Modules
-
-\paragraph*{\cite{Krekel_1985}} \textcolor{green}{wird nur zitiert}
-
-\paragraph*{\cite{Perkins_1992}} \textcolor{red}{hierin eine Quelle ab S. 215 bzw. 199}
-
-\paragraph*{\cite{Oppelt_2015}}
-Notwendigkeit von Simulation w\"ahrend dem Lebenszyklus einer Anlage
+%\paragraph*{\cite{Krekel_1985}} \textcolor{green}{wird nur zitiert}
+%
+%\paragraph*{\cite{Perkins_1992}} \textcolor{red}{hierin eine Quelle ab S. 215 bzw. 199}
+%
+%\paragraph*{\cite{Oppelt_2015}}
+%Notwendigkeit von Simulation w\"ahrend dem Lebenszyklus einer Anlage
 
 \paragraph*{\cite{Strauch_2008}} Modulare Kostensch{\"a}tzung in der chemischen Industrie - Konzept eines integrierten Systems zur Absch{\"a}tzung und Bewertung des Kapitalbedarfes f{\"u}r die Errichtung einer chemischen Anlage
 
