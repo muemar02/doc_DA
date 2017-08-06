@@ -663,6 +663,11 @@ isbn=false, url=false, doi=false, eprint=false%
 %Keine Angabe von Monat/Tag
 \AtEveryBibitem{\clearfield{month}}
 \AtEveryBibitem{\clearfield{day}}
+%Titles in citations enclosed by quotation marks
+\DeclareFieldFormat*{citetitle}{\glqq \textit{#1}\grqq}
+%Authors in upper case in citations, normal font in bibliography
+\renewcommand{\mkbibnamefamily}[1]{\ifcitation{\MakeUppercase{#1}}{#1}}
+\renewcommand{\mkbibnameprefix}[1]{\ifcitation{\MakeUppercase{#1}}{#1}}
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % figures and placement
