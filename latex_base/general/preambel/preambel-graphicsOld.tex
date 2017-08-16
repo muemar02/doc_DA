@@ -2,9 +2,8 @@
 % Grafiken
 %\usepackage{pstricks-add}
 \usepackage{tikz}
-\usepackage{tikz-qtree}
 \usepackage{circuitikz}
-%\usepackage{tikz-uml}
+\usepackage{tikz-uml}
 \ctikzset{voltage/distance from node=.5}% in \pgf@circ@Rlen units 
 \ctikzset{voltage/distance from line=.25}% pos. between 0 and 1 
 \ctikzset{voltage/bump b/.initial=1.5}% 
@@ -12,7 +11,6 @@
 %\usepackage{trfsigns}
  
 \usepackage{pgfplots}
-\pgfplotsset{compat=1.14}
 \usetikzlibrary{plotmarks,math,positioning,shapes,arrows,backgrounds,circuits.logic.IEC,circuits.ee.IEC,decorations.pathmorphing,patterns,shapes.geometric,calc,fit,matrix}
 
 %% NUR unter Windows mit texlive notwendig
@@ -255,7 +253,6 @@
 }
 
 \makeatother
-\usetikzlibrary{trees}
 
 % Dataflows
 \tikzstyle{prozess} = [draw, thick, rounded corners, inner sep=.3cm]
@@ -294,4 +291,3 @@
   UPfeil/.style={black,Pfeil=#1,font={\sffamily\itshape}},% für Spannungspfeile
   IPfeil/.style={black,Pfeil=#1,font={\ttfamily\itshape}} % für Strompfeile
 }   
-\tikzstyle{box}=[rectangle, draw, thick]
