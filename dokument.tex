@@ -12,7 +12,7 @@
  ]{scrreprt} % Classes: scrartcl, scrreprt, scrbook
 
  %%%% Dokument/PDF Metadaten
-\title{Studienarbeit}
+\title{Diplomarbeit}
 \author{Marius M\"uller}
 
 % Encoding der Dateien (sonst funktionieren Umlaute nicht)
@@ -88,26 +88,28 @@
 \input{content/0_01_abkuerzungsverzeichnis}
 \cleardoublepage
 
-% Verzeichnis der Formelzeichen
-\pdfbookmark[0]{Verzeichnis der verwendeten Formelzeichen}{for}
-\input{content/0_02_formelverzeichnis}
-\cleardoublepage
+%% Verzeichnis der Formelzeichen
+%\pdfbookmark[0]{Verzeichnis der verwendeten Formelzeichen}{for}
+%\input{content/0_02_formelverzeichnis}
+%\cleardoublepage
+%
+%% Verzeichnis der verwendeten Indizes
+%\pdfbookmark[0]{Verzeichnis der verwendeten Indizes}{ind}
+%\input{content/0_03_indizes}
+%\cleardoublepage
 
-% Verzeichnis der verwendeten Indizes
-\pdfbookmark[0]{Verzeichnis der verwendeten Indizes}{ind}
-\input{content/0_03_indizes}
-\cleardoublepage
-
-% Verzeichnis der verwendeten Symbole
-\pdfbookmark[0]{Symbolverzeichnis}{sym}
-\input{content/0_04_symbole}
-\cleardoublepage
+%% Verzeichnis der verwendeten Symbole
+%\pdfbookmark[0]{Symbolverzeichnis}{sym}
+%\input{content/0_04_symbole}
+%\cleardoublepage
 
 % Abbildungsverzeichnis
+\pdfbookmark[0]{Abbildungsverzeichnis}{abb}
 \listoffigures
 \cleardoublepage
 
 % Tabellenverzeichnis
+\pdfbookmark[0]{Tabellenverzeichnis}{tab}
 \listoftables
 \cleardoublepage
 
@@ -119,8 +121,10 @@
 \input{content/1_Einleitung}
 \input{content/2_standDerTechnik}
 \input{content/3_Fehlerursachenermittlung}
-\input{content/8_Literatursichtung}
-\input{content/9_Begriffe}
+\input{content/4_FehlerfortpflanzungModule}
+\input{content/5_ZusammenfassungAusblick}
+%\input{content/8_Literatursichtung}
+%\input{content/9_Begriffe}
 
 %
 % Anhang (Bibliographie darf im deutschen nicht in den Anhang!)
@@ -131,7 +135,7 @@
 \stepcounter{chapter}
 %\addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}{Literaturverzeichnis}}
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
-\nocite{*}%alle Elemente im Literaturverzeichnis werden aufgelistet, auch die nicht-zitierten
+%\nocite{*}%alle Elemente im Literaturverzeichnis werden aufgelistet, auch die nicht-zitierten
 \printbibliography[title={Literaturverzeichnis}]
 \cleardoublepage
 %

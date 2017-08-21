@@ -1,0 +1,37 @@
+\begin{tikzpicture}[auto, >=latex']% node distance=3cm,
+    % We start by placing the blocks
+    \node [input, name=input] {}; 					% links der erste nicht sichtbare Block
+    \node [sum, right of=input] (sum) {};			% die Summe links
+    \node [block, right of=sum, node distance=3cm] (process) {Prozess}; % Block Prozess
+    \draw [draw,->] (input) -- node {$u$} (sum); 	% erster Pfeil links neben der Summe
+    \draw [->] (sum) -- node {} (process); 			% Pfeil zwischen Summe und Prozess
+    
+    \node [sum, right of=process, node distance=3cm] (dif) {};			% Differenzknoten rechts oben
+    \draw [->] (process) -- node {} (dif);			% Verbindung Prozess und Differenzknoten
+	\node [output, right of=dif, node distance=3cm] (output) {};		% nicht sichtbarer Knoten für Output
+	\draw [draw,->] (dif) -- node {$y$} (output);	% rechter Pfeil mit y
+	    
+    \node [block, below of=process, minimum height=3.2cm, minimum width=4.5cm, node distance=3cm] (model) {};
+	\node [below of=process, node distance=2cm](res){Residuengenerierung};
+	\node [block, below of=process, minimum height=2cm, minimum width=4cm, node distance=3.25cm] {};
+	\node [below of=process, node distance=2.5cm]{Prozessmodell};
+%\node[anchor=north] at (rect.south) {Centered Above Bottom Border}
+	\node[block, below of=process, minimum height=1cm, minimum width=3.5cm, node distance=3.5cm](red){\parbox{2.5cm}{Redundanz-- beziehungen}};
+        
+    \draw [->] (sum) |- node [near end] {} (model);
+    %\draw [->] (sum) -| node[pos=0.99] {} node [near end] {} (model);
+    \node [output, below of=dif, node distance=1cm] (output3) {};
+    \draw [-] (dif) -- node [near end] {} (output3);
+    \draw [->] (output3) -| node [near end] {} (model);
+    
+    %\node [block, right of=model, node distance=7cm] (fehler) {Fehlererkennung };
+    \node [block, right of=model, minimum height=3.2cm, minimum width=4cm, node distance=6.4cm] (fehler){};
+	\node [right of=res, node distance=6.4cm](delta){\parbox{3.5cm}{Fehlererkennung und --isolation}};
+%\node[anchor=north] at (rect.south) {Centered Above Bottom Border}
+	\node[block, below of=delta, minimum height=1cm, node distance=1.25cm]{\parbox{2.5cm}{Residuen-- auswertung}};
+		
+    \draw [draw,->] (model) -- node {Residuen} (fehler);
+    
+    \node [output, right of=fehler, node distance=5.5cm] (output2) {};
+    \draw [draw,->] (fehler) -- node {erkannte Fehler} (output2);  
+\end{tikzpicture}

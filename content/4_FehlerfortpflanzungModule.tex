@@ -1,0 +1,17 @@
+\chapter{Fehlerfortpflanzung in modularen Anlagen durch Einsatz von Graphen}\label{ch:ffpflMod}
+
+Betrachtung der Vor- und Nachteile von \ac{sdg} wird in \cite{Yang_2010} behandelt: 
+\begin{itemize}
+\item Vorteile einer wissensbasierten Erstellung von \acp{sdg}: 
+  \begin{itemize}
+  \item teilautomatisiert durch Softwareunterst\"utzung m\"oglich
+  \end{itemize}
+\item Nachteile: 
+  \begin{itemize}
+  \item Graph wird nicht plausibilisiert, kein Test auf Kausalit\"at
+  \item Kanten werden nicht gewichtet -> extrem unwahrscheinliche Fehlerfortpflanzungen sind nicht von wahrscheinlichen zu unterscheiden
+  \item Wechselwirkungen zwischen mehreren Eingangsparametern werden nicht abgebildet
+  \item Zeithorizont wird nicht abgebildet, in Folge dessen sind transiente Vorg\"ange nicht von Station\"aren zu unterscheiden
+  \end{itemize}   
+\end{itemize}
+L\"osung: \"Ubergang zu datenbasierter Graphenentwicklung. Durch die Verwendung von Messdaten und den Einsatz gezielter Verz\"ogerungen kann die Korrelation zwischen Gr\"o\ss{}en bestimmt und der Graph konstruiert werden. Die Korrelation muss dabei mit Hilfe geeigneter Verfahren auf Signifikanz untersucht werden. Der datenbasierter Ansatz verfeinert den wissensbasierten Graphen dann erfolgreich. 

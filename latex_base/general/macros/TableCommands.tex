@@ -36,17 +36,19 @@
 % \newcolumntype{R}[1]{>{\PreserveBackslash\RaggedLeft\hspace{0pt}}m{#1}}
 % \newcolumntype{S}[1]{>{\PreserveBackslash\RaggedLeft\hspace{0pt}}p{#1}}
 % % Zentriert :
-% \newcolumntype{Z}[1]{>{\PreserveBackslash\Centering\hspace{0pt}}m{#1}}
+%\newcolumntype{Z}[1]{>{\PreserveBackslash\Centering\hspace{0pt}}m{#1}}
 % \newcolumntype{A}[1]{>{\PreserveBackslash\Centering\hspace{0pt}}p{#1}}
 
-\newcolumntype{Y}{>{\PreserveBackslash\RaggedLeft\hspace{0pt}}X}
+\newcolumntype{C}{>{\PreserveBackslash\Centering\hspace{0pt}}X}
+\newcolumntype{R}{>{\PreserveBackslash\RaggedLeft\hspace{0pt}}X}
+\newcolumntype{L}{>{\PreserveBackslash\RaggedRight\hspace{0pt}}X}
 %%% Spalten fuer Mathematik
 %
-% serifenlose Matheschrift
-\newcolumntype{s}[1]{%
-	>{\DC@{.}{,}{#1}\mathsf\bgroup}l%
-	<{\egroup\DV@end}%
-}
+%% serifenlose Matheschrift
+%\newcolumntype{s}[1]{%
+%	>{\DC@{.}{,}{#1}\mathsf\bgroup}l%
+%	<{\egroup\DV@end}%
+%}
 
 % Tabellenspaltentyp fuer den Kopf: (Farbe + Ausrichtung)
 \newcolumntype{H}[1]{>{\columncolor{tableheadcolor}}l}

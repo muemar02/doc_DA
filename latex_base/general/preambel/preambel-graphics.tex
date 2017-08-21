@@ -12,7 +12,7 @@
 %\usepackage{trfsigns}
  
 \usepackage{pgfplots}
-\pgfplotsset{compat=1.14}
+\pgfplotsset{compat=newest}
 \usetikzlibrary{plotmarks,math,positioning,shapes,arrows,backgrounds,circuits.logic.IEC,circuits.ee.IEC,decorations.pathmorphing,patterns,shapes.geometric,calc,fit,matrix}
 
 %% NUR unter Windows mit texlive notwendig
@@ -273,7 +273,7 @@
 \tikzstyle{rblock} = [draw, fill=white, circle, inner sep=0pt,minimum size=1mm]
 \tikzstyle{wobblock} = [fill=white, rectangle, minimum height=3em, minimum width=5em]
 \tikzstyle{nlblock} = [draw, postaction={draw,line width=0.25mm,white}, line width=0.5mm, black, fill=white, rectangle, minimum height=3em, minimum width=5em]
-\tikzstyle{sum} = [draw,circle]
+%\tikzstyle{sum} = [draw,circle]
 \tikzstyle{branch} = [circle,inner sep=0pt,minimum size=1mm,fill=black,draw=black]
 \tikzstyle{nvbranch} = [circle,inner sep=0pt,minimum size=1mm,fill=white,draw=white, fill opacity=0, draw opacity=0]
 \tikzstyle{vecBranch} = [circle,inner sep=0pt,minimum size=2mm,fill=black,draw=black]
@@ -295,3 +295,7 @@
   IPfeil/.style={black,Pfeil=#1,font={\ttfamily\itshape}} % für Strompfeile
 }   
 \tikzstyle{box}=[rectangle, draw, thick]
+
+\tikzstyle{sum} = [draw, fill=black, circle, node distance=0.5cm, inner sep=0pt,minimum size=0.5em]
+
+\tikzstyle{circ} = [draw, circle, node distance=1cm]
