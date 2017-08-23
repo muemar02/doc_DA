@@ -21,6 +21,13 @@
 \label{fig:PIDMod3}
 \end{figure}
 
+\begin{figure}[h!tb]
+\centering
+\includegraphics[width=\textheight,angle=90]{bilder/mETH_V3_eng.png}
+\caption[Modulare Gesamtanlage]{Darstellung der Ethylacetatanlage als modulare Anlage nach \cite{Pfeffer_2016}}
+\label{fig:PIDGes}
+\end{figure}
+
 \chapter{Anhang von Tabellen} \label{cha:anhang_tabellen}
 \begin{sidewaystable}[htb]
 \tablestyle
@@ -38,26 +45,50 @@
    \tabularnewline
 %
 \tablebody
-  1 & in1 & no & flow & less level & valve(s) faulty OR control faulty OR externalcauses & - & - \\
-  \hline 
-  2 & in1 & more & flow & more level & valve faulty OR control faulty OR externalcauses & - & -  \\ 
-  \hline 
-  3 & in1 & less & flow & less level & valve(s) faulty OR control faulty OR externalcauses & - & - \\ 
-  \hline 
-  4 & tank & more & level & more pressure & ID=2 OR level sensor faulty & measure level & - \\ 
-  \hline 
-  5 & tank & no/less & level & no reactant $\mapsto$ damage pump & ID=1 OR ID=3 OR level sensor faulty OR leakage & measure level & - \\
-  \hline  
-  6 & out1 & no/less & flow & damage pump OR external consequences & pump faulty OR valve faulty OR ID=5 & - & - \\ 
-  \hline 
-  7 & out1 & more & flow & damage pump OR external consequences & pump faulty OR ID=4 OR ID=6 & - & - \\ 
-  \hline 
-  8 & out1 & reverse & flow & pollution of reactant & pump faulty OR external causes & - & - 
+1	&	in1	&	no	&	flow	&	less tanklevel	&	valve(s) faulty OR control faulty OR externalcauses	&	-	&	-	\\ \hline
+2	&	in1	&	more	&	flow	&	more tanklevel	&	valve faulty OR control faulty OR externalcauses	&	-	&	-	\\ \hline
+3	&	in1	&	less	&	flow	&	less tanklevel	&	valve(s) faulty OR control faulty OR externalcauses	&	-	&	-	\\ \hline
+4	&	tank	&	more	&	level	&	more pressure	&	ID=2 OR level sensor faulty	&	measure level	&	-	\\ \hline
+5	&	tank	&	no	&	level	&	no reactant AND damage pump OR less out1flow	&	ID=1 OR ID=3 OR level sensor faulty OR leakage	&	measure level	&	-	\\ \hline
+6	&	out1	&	no/less	&	flow	&	damage pump OR external consequences	&	pump faulty OR valve faulty OR ID=5	&	-	&	-	\\ \hline
+7	&	out1	&	more	&	flow	&	damage pump OR external consequences	&	pump faulty OR ID=4 OR ID=6	&	-	&	-	\\ \hline
+8	&	out1	&	reverse	&	flow	&	pollution of reactant	&	pump faulty OR externalcauses	&	-	&	-
    \tabularnewline
 %
 \tableend
 \end{tabularx}
 \label{tab:hazopBsp_M1}
+\end{sidewaystable}
+
+\begin{sidewaystable}[htb]
+\tablestyle
+\caption[HAZOP von Modul 2 Fehlerbehaftet]{Ergebnisse der \ac{hazop} f\"ur das Tankmodul 2 bezogen auf Durchfluss und F\"ullstand mit syntaktischen Abweichungen nach \cite{Pfeffer_2017}}
+\begin{tabularx}{\textheight}{ccccCCCC}
+\tableheadcolor
+   {\tablehead ID} &
+   {\tablehead unit} &
+   {\tablehead Guide word} &
+   {\tablehead Physical property} &
+   {\tablehead consequences}&
+   {\tablehead causes}&
+   {\tablehead mechanisms for identification of deviation}&
+   {\tablehead recommendation}
+   \tabularnewline
+%
+\tablebody
+1	&	in1	&	no	&	flow	&	less level	&	valve(s) faulty OR control faulty OR externalcauses	&	-	&		\\ \hline
+2	&	in1	&	more	&	flow	&	more level	&	valve faulty OR control faulty OR externalcauses	&	-	&		\\ \hline
+3	&	in1	&	less	&	flow	&	less level	&	valve(s) faulty OR control faulty OR externalcauses	&	-	&		\\ \hline
+4	&	tank	&	more	&	level	&	more pressure (see ID=6)	&	ID=2 OR level sensor faulty	&	measure level	&		\\ \hline
+5	&	tank	&	no/less	&	level	&	no reactant $\longrightarrow$ damage pump	&	ID=1 OR ID=3 OR level sensor faulty OR leakage	&	measure level	&		\\ \hline
+6	&	out1	&	no/less	&	flow	&	damage pump OR external consequences	&	pump faulty OR valve faulty OR ID=5	&	-	&		\\ \hline
+7	&	out1	&	more	&	flow	&	damage pump OR external consequences	&	pump faulty OR ID=4 OR ID=6	&	-	&		\\ \hline
+8	&	out1	&	reverse	&	flow	&	pollution of reactant	&	pump faulty OR externalcauses	&	-	&		
+   \tabularnewline
+%
+\tableend
+\end{tabularx}
+\label{tab:hazopBsp_M2Fehler}
 \end{sidewaystable}
 
 \begin{sidewaystable}[htb]

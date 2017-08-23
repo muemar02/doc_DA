@@ -7,9 +7,11 @@ Ein weiterer Forschungsschwerpunkt, bei welchem die Fortpflanzung von Fehlern un
 \item Anwendbarkeit von Detailwissen \"uber die Funktion und Sicherheit einzelner Module,
 \item Nutzung der Methode im industriellen Ma\ss{}stab, 
 \item Wiederverwendbarkeit von Ingenieurleistungen,
-\item Zeiteinsparung bei Durchf\"uhrung einer \ac{hazop} f\"ur eine modulare Gesamtanlage und
+\item Zeiteinsparung bei Durchf\"uhrung einer Sicherheitsuntersuchung f\"ur eine modulare Gesamtanlage,
+\item Umfang der zur Durchf\"uhrung der Methode notwendigen Informationen und
 \item Beschreibung der Wechselwirkung von Modulen durch Fehlerfortpflanzungsanalyse
-\end{itemize} bewertet.
+\end{itemize} bewertet, wobei das vorletzte Kriterium mit den im Kontext dieser Arbeit vorausgesetzten Informationen in direktem Zusammenhang steht. Das zuletzt genannte Kriterium muss zwingend erf\"ullt sein, damit eine Methode als geeignet zu bewerten ist.
+ 
 Die Systeme zur automatisierten \ac{hazop} als auch die Methoden der \ac{fdi} versuchen, auf Basis von vorhandenem Wissen eine vorliegende Situation zu bewerten. Die zu untersuchende Situation wird auf Basis von Messwerten oder durch eine parametrierbare Beschreibung charakterisiert. Zur Bewertung ist das algorithmische Ziehen von Schlussfolgerungen notwendig. Dies basiert in aller Regel auf der Auswertung des vorhandenen Wissens unter der Anwendung von \glqq Inferenzmechanismen\grqq { }. Diese schlie\ss{}en das Pr\"ufen von bekannten Aussagen auf Erf\"ulltheit durch Analyse eines aktuellen Zustands ebenso wie das Herleiten von neuen Aussagen (Konklusionen) auf Basis von bekannten, wahren Aussagen (Pr\"amissen) ein. Man unterscheidet dabei die drei Inferenzmechanismen \begin{enumerate}
 \item deduktives Schlie\ss{}en,
 \item abduktives Schlie\ss{}en und
@@ -196,5 +198,5 @@ In der aktuellen Arbeit \citetitle{Zhang_2017} ist eine umfassende \"Ubersicht z
 \item \ac{pls}.
 \end{itemize}
 \ac{pca} ist ein Verfahren der multivariaten Statistik, mit Hilfe dessen die Korrelation in einer gro\ss{}en Datenmenge effizient durch eine geringe Anzahl an Variablen beschrieben werden kann. \ac{pls} ist eine Methode der multivariaten linearen Regression, welche besonders flexibel einsetzbar ist. Eine Bewertung von \ac{pca} und \ac{pls} gegen\"uber anderen statistischen Methoden wird anhand des \ac{teb} von \citeauthor{Yin2012} in \citetitle{Yin2012} vorgestellt \cite{Yin2012}. \newline
-Weiterhin wird in \cite{Zhang_2017} eine datenbasierte Risikoanalyse auf Basis von Deep Learning vorgeschlagen. Dazu wird ein \ac{dbn} eingesetzt, dessen Schichten aus \ac{rbn} bestehen. Diese Kombination hat eine verbesserte Identifikation von Fehlern zur Folge, wie anhand des \ac{teb} nachgewiesen wird. Die vorgestellte Methode ben\"otigt zum Training der Struktur eine gro\ss{}e Mengen an Messdaten, welche insbesondere eine gro\ss{}e Anzahl an Daten zu Fehlfunktionen in der Anlage enthalten sollen. \newline
+Weiterhin wird in \cite{Zhang_2017} eine datenbasierte Risikoanalyse auf Basis von Deep Learning vorgeschlagen. Dazu wird ein \ac{dbn} eingesetzt, dessen Schichten aus \acp{rbn} bestehen. Diese Kombination hat eine verbesserte Identifikation von Fehlern zur Folge, wie anhand des \ac{teb} nachgewiesen wird. Die vorgestellte Methode ben\"otigt zum Training der Struktur eine gro\ss{}e Mengen an Messdaten, welche insbesondere eine gro\ss{}e Anzahl an Daten zu Fehlfunktionen in der Anlage enthalten sollen. \newline
 Die Kombination von statistischen Verfahren mit denen der Mustererkennung kann die Identifikation von Fehlern ebenfalls verbessern. In \citetitle{Mallick_2013} zeigen \citeauthor{Mallick_2013}, wie durch eine Kombination von \ac{pca} mit \ac{bbn} Fehler in Anlagen diagnostiziert werden k\"onnen \cite{Mallick_2013}. Mit Hilfe historischer Daten zur Prozessdynamik, durch Formulierung von Differentialgleichungen oder durch Expertenwissen wird ein initiales \ac{bbn} aufgestellt. Aus Messdaten des Normalbetriebs wird das \ac{pca} aufgebaut und das \ac{bbn} verbessert. Im Betrieb der Anlage kann dann in Echtzeit das Vorliegen eines Fehlers und dessen Ursache erfolgreich erkannt werden. 
