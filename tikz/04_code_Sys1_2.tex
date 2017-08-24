@@ -1,0 +1,33 @@
+\begin{tikzpicture}[%
+  edge from parent/.style={very thick,draw=black!70,-latex},
+	level a/.style={xshift=2em},
+	level b1/.style={xshift=9em},
+	level b2/.style={xshift=5em},
+	level b3/.style={xshift=2em}
+	]
+	\node [sumGraph, right of=8, node distance=4cm](15) {}
+	child { node [sumGraph](16){}}
+	child { node [sumGraph](17){}}
+	child { node [sumGraph](18){}};
+	\node [output]	at (15.east)	[label=0:in1F3]	{};
+	\node [output]	at (16.west)	[label=-10:C1\_3]	{};
+	\node [output]	at (17.west)	[label=-10:C2\_3]	{};
+	\node [output]	at (18.west)	[label=-10:C3\_3]	{};
+	
+	\node [sumGraph, right of=15, node distance=4.5cm](19) {}
+	child { node [sumGraph](20){}}
+	child { node [sumGraph](21){}}
+	child { node [sumGraph](22){}};
+	\node [output]	at (19.east)	[label=0:in2F3]	{};
+	\node [output]	at (20.west)	[label=-10:C4\_3]	{};
+	\node [output]	at (21.west)	[label=-10:C5\_3]	{};
+	\node [output]	at (22.west)	[label=-10:C6\_3]	{};
+	
+	\node [sumGraph, right of=11, node distance=6cm](23) {}
+	child { node [sumGraph](24){}}
+	child { node [sumGraph](25){}};
+	\node [output]	at (23.east)	[label=0:coloumnL3]	{};
+	\node [output]	at (24.west)	[label=-10:C7\_3]	{};
+	\node [output]	at (25.west)	[label=-10:C8\_3]	{};
+	
+	\end{tikzpicture}

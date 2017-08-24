@@ -1,0 +1,46 @@
+%\begin{tikzpicture}[%
+%			edge from parent/.style={very thick,draw=black!70,-latex},
+%	level a/.style={xshift=2em},
+%	level b1/.style={xshift=9em},
+%	level b2/.style={xshift=5em},
+%	level b3/.style={xshift=2em}
+%	]
+%	%%%% Beginn tikz-Baumdiagramm
+%	\node [sumGraph](1) {}
+%	child { node [sumGraph](2){}
+%		child {node [sumGraph](3){}}
+%		child {node [sumGraph](4){}
+%			child {node [sumGraph](5){}
+%				child {node [sumGraph](6){}}
+%				child {node [sumGraph](7){}}}}};
+%	\node [output]	at (1.east)	[label=0:tankL1]	{};
+%	\node [output]	at (2.east)	[label=0:out1F1]	{};
+%	\node [output]	at (3.west)	[label=-10:C6\_1]	{};
+%	\node [output]	at (4.east)	[label=0:F\_out1F1\_in1F3]	{};
+%	\node [output]	at (5.east)	[label=0:in1F3]	{};
+%	\node [output]	at (6.west)	[label=-10:C2\_3]	{};
+%	\node [output]	at (7.west)	[label=-10:C3\_3]	{};
+%	\end{tikzpicture}
+\begin{tikzpicture}[%
+			edge from parent/.style={very thick,draw=black!70,-latex},
+	level a/.style={xshift=2em},
+	level b1/.style={xshift=9em},
+	level b2/.style={xshift=5em},
+	level b3/.style={xshift=2em}
+	]
+	%%%% Beginn tikz-Baumdiagramm
+	\node [sumGraph](1) {}
+	child { node [sumGraph](2){}
+		child {node [sumGraph](3){}}
+		child {node [sumGraph](4){}
+			child {node [sumGraph](5){}
+				child {node [sumGraph](6){}}
+				child {node [sumGraph](7){}}}}};
+	\node [output]	at (1.east)	[label=0:tankL1]	{};
+	\node [output]	at (2.east)	[label=0:out1F1]	{};
+	\node [output]	at (3.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C6\_1}]	{};
+	\node [output]	at (4.east)	[label=0:F\_out1F1\_in1F3]	{};
+	\node [output]	at (5.east)	[label=0:in1F3]	{};
+	\node [output]	at (6.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C2\_3}]	{};
+	\node [output]	at (7.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C3\_3}]	{};
+	\end{tikzpicture}

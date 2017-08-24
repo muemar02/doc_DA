@@ -113,8 +113,8 @@
 \listoftables
 \cleardoublepage
 
-\input{content/0_13_thesen}
-\cleardoublepage
+%\input{content/0_13_thesen}
+%\cleardoublepage
 
 % Hauptteil
 \mainmatter
@@ -143,13 +143,17 @@
 \backmatter
 \appendix
 \input{content/10_anhang}
-%
-%\IfDefined{printindex}{\printindex}
-%\IfDefined{printnomenclature}{\printnomenclature}
-%\cleardoublepage
-%\leerseite{}
-%\cleardoublepage
 
+\IfDefined{printindex}{\printindex}
+\IfDefined{printnomenclature}{\printnomenclature}
+\cleardoublepage
+\leerseite{}
+\cleardoublepage
+
+%\begin{figure}  \centering  
+%
+%  \caption{codeModul2error}
+%  \end{figure}
 
 \end{document}
 

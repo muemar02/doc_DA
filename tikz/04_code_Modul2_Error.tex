@@ -1,0 +1,30 @@
+\begin{tikzpicture}[%
+			edge from parent/.style={very thick,draw=black!70,-latex},
+	level a/.style={xshift=2em},
+	level b1/.style={xshift=9em},
+	level b2/.style={xshift=5em},
+	level b3/.style={xshift=2em}
+	]
+	%%%% Beginn tikz-Baumdiagramm
+	\node [sumGraph](1) {}
+	child { node [sumGraph](2){}};
+	\node [output]	at (1.east)	[label=0:in1F2]	{};
+	\node [output]	at (2.west)	[label={[xshift=0.2cm, yshift=-0.9cm]L2}]	{};
+	
+	\node [sumGraph, right of=1, node distance=4cm](3) {}
+	child { node [sumGraph](4){}}
+	child { node [sumGraph](5){}};
+	\node [output]	at (3.east)	[label=0:tankL2]	{};
+	\node [output]	at (4.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C4\_2}]	{};
+	\node [output]	at (5.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C5\_2}]	{};
+	
+	\node [sumGraph, right of=3, node distance=6cm](6) {}
+	child { node [sumGraph](7){}}
+	child { node [sumGraph](8){}}
+	child { node [sumGraph](9){}};
+	\node [output]	at (6.east)	[label=0:out1F2]	{};
+	\node [output]	at (7.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C6\_2}]	{};
+	\node [output]	at (8.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C7\_2}]	{};
+	\node [output]	at (9.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C8\_2}]	{};
+	
+	\end{tikzpicture}

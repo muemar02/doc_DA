@@ -1,0 +1,66 @@
+\begin{tikzpicture}[%
+			edge from parent/.style={very thick,draw=black!70,-latex},
+	level a/.style={xshift=2em},
+	level b1/.style={xshift=9em},
+	level b2/.style={xshift=5em},
+	level b3/.style={xshift=2em}
+	]
+	%%%% Beginn tikz-Baumdiagramm
+	\node [sum](1) {}
+	child { node [sum](2){}
+		child {node [sum](3){}}
+		child {node [sum](4){}
+				child {node [sum](5){}}
+				child {node [sum](6){}}
+				child {node [sum](7){}}
+				child {node [sum](8){}
+					child {node [sum](9){}
+						child {node [sum](10){}}
+						child {node [sum](11){}}
+						child {node [sum](12){}}}}}};
+	\node [output]	at (1.east)	[label=0:in1F1]	{};
+	\node [output]	at (2.east)	[label=0:tankL1]	{};
+	\node [output]	at (3.west)	[label={[xshift=0cm, yshift=-0.8cm]C4\_1}]	{};
+	\node [output]	at (4.east)	[label=0:out1F1]	{};
+	\node [output]	at (5.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C6\_1}]	{};
+	\node [output]	at (6.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C7\_1}]	{};
+	\node [output]	at (7.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C8\_1}]	{};
+	\node [output]	at (8.east)	[label={[xshift=0.9cm, yshift=0.4cm]F\_out1F1\_in1F3}]	{};
+	\node [output]	at (9.east)	[label=0:in1F3]	{};
+	\node [output]	at (10.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C1\_3}]	{};
+	\node [output]	at (11.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C2\_3}]	{};
+	\node [output]	at (12.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C3\_3}]	{};
+	
+	\node [sum, right of=1, node distance=7.5cm](14) {}
+	child { node [sum](15){}
+		child {node [sum](16){}}
+		child {node [sum](17){}
+				child {node [sum](19){}}
+				child {node [sum](20){}}
+				child {node [sum](21){}}
+				child {node [sum](22){}
+					child {node [sum](23){}
+						child {node [sum](24){}}
+						child {node [sum](25){}}
+						child {node [sum](26){}}}}}};
+	\node [output]	at (14.east)	[label=0:in1F2]	{};
+	\node [output]	at (15.east)	[label=0:tankL2]	{};
+	\node [output]	at (16.west)	[label={[xshift=0cm, yshift=-0.8cm]C4\_2}]	{};
+	\node [output]	at (17.east)	[label=0:out1F2]	{};
+	\node [output]	at (19.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C6\_2}]	{};
+	\node [output]	at (20.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C7\_2}]	{};
+	\node [output]	at (21.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C8\_2}]	{};
+	\node [output]	at (22.east)	[label={[xshift=0.9cm, yshift=0.4cm]F\_outF2\_in2F3}]	{};
+	\node [output]	at (23.east)	[label=0:in2F3]	{};
+	\node [output]	at (24.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C4\_3}]	{};
+	\node [output]	at (25.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C5\_3}]	{};
+	\node [output]	at (26.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C6\_3}]	{};
+	
+	\node [sum, right of=1, node distance=4cm](27) {}
+	child { node [sum](28){}}
+	child { node [sum](29){}};
+	\node [output]	at (27.east)	[label=0:coloumnL3]	{};
+	\node [output]	at (28.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C7\_3}]	{};
+	\node [output]	at (29.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C8\_3}]	{};
+	
+	\end{tikzpicture}

@@ -1,0 +1,108 @@
+%\begin{tikzpicture}[%
+%			edge from parent/.style={very thick,draw=black!70,-latex},
+%	level a/.style={xshift=2em},
+%	level b1/.style={xshift=9em},
+%	level b2/.style={xshift=5em},
+%	level b3/.style={xshift=2em}
+%	]
+%	%%%% Beginn tikz-Baumdiagramm
+%	\node [sumGraph](1) {}
+%	child { node [sumGraph](2){}
+%		child {node [sumGraph](3){}}
+%		child {node [sumGraph](4){}
+%				child {node [sumGraph](5){}}
+%				child {node [sumGraph](6){}}
+%				child {node [sumGraph](7){}}
+%				child {node [sumGraph](8){}
+%					child {node [sumGraph](9){}
+%						child {node [sumGraph](10){}}
+%						child {node [sumGraph](11){}}
+%						child {node [sumGraph](12){}}}}}};
+%	\node [output]	at (1.east)	[label=0:in1F1]	{};
+%	\node [output]	at (2.east)	[label=0:tankL1]	{};
+%	\node [output]	at (3.west)	[label=-10:C4\_1]	{};
+%	\node [output]	at (4.east)	[label=0:out1F1]	{};
+%	\node [output]	at (5.west)	[label=-10:C6\_1]	{};
+%	\node [output]	at (6.west)	[label=-10:C7\_1]	{};
+%	\node [output]	at (7.west)	[label=-10:C8\_1]	{};
+%	\node [output]	at (8.east)	[label=0:F\_out1F1\_in1F3]	{};
+%	\node [output]	at (9.east)	[label=0:in1F3]	{};
+%	\node [output]	at (10.west)	[label=-10:C1\_3]	{};
+%	\node [output]	at (11.west)	[label=-10:C2\_3]	{};
+%	\node [output]	at (12.west)	[label=-10:C3\_3]	{};
+%		
+%	\node [sumGraph, right of=1, node distance=4cm](27) {}
+%	child { node [sumGraph](28){}}
+%	child { node [sumGraph](29){}};
+%	\node [output]	at (27.east)	[label=0:coloumnL3]	{};
+%	\node [output]	at (28.west)	[label=-10:C7\_3]	{};
+%	\node [output]	at (29.west)	[label=-10:C8\_3]	{};
+%	\end{tikzpicture}
+
+\begin{tikzpicture}[%
+			edge from parent/.style={very thick,draw=black!70,-latex},
+	level a/.style={xshift=2em},
+	level b1/.style={xshift=9em},
+	level b2/.style={xshift=5em},
+	level b3/.style={xshift=2em}
+	]
+	%%%% Beginn tikz-Baumdiagramm
+	\node [sumGraph](1) {}
+	child { node [sumGraph](2){}
+		child {node [sumGraph](3){}}
+		child {node [sumGraph](4){}
+				child {node [sumGraph](5){}}
+				child {node [sumGraph](6){}}
+				child {node [sumGraph](7){}}
+				child {node [sumGraph](8){}
+					child {node [sumGraph](9){}
+						child {node [sumGraph](10){}}
+						child {node [sumGraph](11){}}
+						child {node [sumGraph](12){}}}}}};
+	\node [output]	at (1.east)	[label=0:in1F1]	{};
+	\node [output]	at (2.east)	[label=0:tankL1]	{};
+	\node [output]	at (3.west)	[label={[xshift=0cm, yshift=-0.9cm]C4\_1}]	{};
+	\node [output]	at (4.east)	[label=0:out1F1]	{};
+	\node [output]	at (5.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C6\_1}]	{};
+	\node [output]	at (6.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C7\_1}]	{};
+	\node [output]	at (7.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C8\_1}]	{};
+	\node [output]	at (8.east)	[label=0:F\_out1F1\_in1F3]	{};
+	\node [output]	at (9.east)	[label=0:in1F3]	{};
+	\node [output]	at (10.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C1\_3}]	{};
+	\node [output]	at (11.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C2\_3}]	{};
+	\node [output]	at (12.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C3\_3}]	{};
+		
+	\node [sumGraph, right of=1, node distance=4cm](27) {}
+	child { node [sumGraph](28){}}
+	child { node [sumGraph](29){}};
+	\node [output]	at (27.east)	[label=0:coloumnL3]	{};
+	\node [output]	at (28.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C7\_3}]	{};
+	\node [output]	at (29.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C8\_3}]	{};
+	
+	
+	\node [sumGraph, right of=27, node distance=4cm](15) {}
+	child { node [sumGraph](16){}}
+	child { node [sumGraph](17){}}
+	child { node [sumGraph](18){}};
+	\node [output]	at (15.east)	[label=0:in1F3]	{};
+	\node [output]	at (16.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C1\_3}]	{};
+	\node [output]	at (17.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C2\_3}]	{};
+	\node [output]	at (18.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C3\_3}]	{};
+	
+	\node [sumGraph, below of=18, node distance=1.5cm](23) {}
+	child { node [sumGraph](24){}}
+	child { node [sumGraph](25){}};
+	\node [output]	at (23.east)	[label=0:coloumnL3]	{};
+	\node [output]	at (24.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C7\_3}]	{};
+	\node [output]	at (25.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C8\_3}]	{};
+	
+		\node [sumGraph, below of=24, node distance=1.5cm](19) {}
+	child { node [sumGraph](20){}}
+	child { node [sumGraph](21){}}
+	child { node [sumGraph](22){}};
+	\node [output]	at (19.east)	[label=0:in2F3]	{};
+	\node [output]	at (20.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C4\_3}]	{};
+	\node [output]	at (21.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C5\_3}]	{};
+	\node [output]	at (22.west)	[label={[xshift=0.2cm, yshift=-0.9cm]C6\_3}]	{};
+
+	\end{tikzpicture}

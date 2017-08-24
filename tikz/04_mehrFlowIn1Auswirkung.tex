@@ -1,0 +1,45 @@
+			\begin{tikzpicture}[%
+	%%%% Ausrichtung
+	%every child/.style={anchor=west,grow=down},
+	%%%% kleinere Schriftgröße
+	%node font=\small,
+	%%%% definiert von wo (Parent) nach wo (Child) die Linien gehen sollen, wenn Pfeil zu Child gewünscht, dann "[->]" wie folgt einsetzen "...path={[->](tikzparentnode.south)..."
+	%edge from parent path={([xshift=0em]\tikzparentnode.east) |- (\tikzchildnode.west)},
+	%%%% horizontale Abstände
+	edge from parent/.style={very thick,draw=black!70,-latex},
+	level a/.style={xshift=2em},
+	level b1/.style={xshift=9em},
+	level b2/.style={xshift=5em},
+	level b3/.style={xshift=2em}
+	]
+	%%%% Beginn tikz-Baumdiagramm
+	\node [sumGraph](1) {}
+	child { node [sumGraph](2){}
+		child {node [sumGraph](3){}}};
+	\node [output]	at (1.east)	[label=0:in1F1]	{};
+	\node [output]	at (2.east)	[label=0:tankL1]	{};
+	\node [output]	at (3.east)	[label=0:C4\_1]	{};
+%	child[level distance=0cm,level a] { node [box] {anschauungsraumbezogene Verfahren}
+%		child[level distance=0cm,level b1] { node [box] {Guyan}
+%			child[level distance=0cm,level b2] {node [box] {RM a}}}
+%		child[level distance=1cm,level b1] { node [box] {Dyn. Kondensation}
+%			child[level distance=0cm,level b2] {node [box] {RM b}}}
+%		child[level distance=2cm,level b1] { node [box] {IRS}
+%			child[level distance=0cm,level b2] {node [box] {RM c}}}
+%	}
+%	child[level distance=3cm,level a] { node [box] {Verfahren im modalen Raum}
+%		child[level distance=0cm,level b1] { node [box] {SOMT}
+%			child[level distance=0cm,level b2] {node [box] {RM d}}}
+%		child[level distance=1cm,level b1] { node [box] {SEREP}
+%			child[level distance=0cm,level b2] {node [box] {RM e}}}
+%	}
+%	child[level distance=5cm,level a] { node [box] {Verfahren im allg. Vektorraum}
+%		child[level distance=0cm,level b1] { node [box] {KSM}
+%			child[level distance=0cm,level b2] {node [box] {RM f}}}
+%		child[level distance=1cm,level b1] { node [box] {SOBT}
+%			child[level distance=0cm,level b2] {node [box] {RM g}}}
+%		child[level distance=2cm,level b1] { node [box] {POD}
+%			child[level distance=0cm,level b2] {node [box] {RM h}}}
+%	}
+%	};
+	\end{tikzpicture}
